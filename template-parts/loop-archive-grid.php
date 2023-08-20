@@ -29,7 +29,7 @@ $grid_columns = 4; ?>
 				</header> <!-- end article header -->	
 								
 				<section class="entry-content" itemprop="text">
-					<?php the_content('<button class="tiny">' . __( 'Read more...', 'lanalearn' ) . '</button>'); ?> 
+					<?php the_content('<button class="tiny">' . __( 'Read more...', 'lana' ) . '</button>'); ?> 
 				</section> <!-- end article section -->
 								    							
 			</article> <!-- end article -->

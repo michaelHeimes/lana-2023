@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package lanalearn
+ * @package lana
  */
 
 /**
@@ -14,13 +14,13 @@
  * See: https://jetpack.com/support/responsive-videos/
  * See: https://jetpack.com/support/content-options/
  */
-function lanalearn_jetpack_setup() {
+function lana_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support(
 		'infinite-scroll',
 		array(
 			'container' => 'main',
-			'render'    => 'lanalearn_infinite_scroll_render',
+			'render'    => 'lana_infinite_scroll_render',
 			'footer'    => 'page',
 		)
 	);
@@ -33,7 +33,7 @@ function lanalearn_jetpack_setup() {
 		'jetpack-content-options',
 		array(
 			'post-details' => array(
-				'stylesheet' => 'lanalearn-style',
+				'stylesheet' => 'lana-style',
 				'date'       => '.posted-on',
 				'categories' => '.cat-links',
 				'tags'       => '.tags-links',
@@ -48,13 +48,13 @@ function lanalearn_jetpack_setup() {
 		)
 	);
 }
-add_action( 'after_setup_theme', 'lanalearn_jetpack_setup' );
+add_action( 'after_setup_theme', 'lana_jetpack_setup' );
 
-if ( ! function_exists( 'lanalearn_infinite_scroll_render' ) ) :
+if ( ! function_exists( 'lana_infinite_scroll_render' ) ) :
 	/**
 	 * Custom render function for Infinite Scroll.
 	 */
-	function lanalearn_infinite_scroll_render() {
+	function lana_infinite_scroll_render() {
 		while ( have_posts() ) {
 			the_post();
 			if ( is_search() ) :

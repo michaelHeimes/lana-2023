@@ -17,8 +17,8 @@
 	</section> <!-- end article section -->
 						
 	<footer class="article-footer">
-		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'lanalearn' ), 'after'  => '</div>' ) ); ?>
-		<p class="tags"><?php the_tags('<span class="tags-title">' . __( 'Tags:', 'lanalearn' ) . '</span> ', ', ', ''); ?></p>	
+		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'lana' ), 'after'  => '</div>' ) ); ?>
+		<p class="tags"><?php the_tags('<span class="tags-title">' . __( 'Tags:', 'lana' ) . '</span> ', ', ', ''); ?></p>	
 	</footer> <!-- end article footer -->
 						
 	<?php comments_template(); ?>	

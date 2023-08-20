@@ -10,7 +10,7 @@
 
 	<div class="inner">
 	
-		<?php lanalearn_off_canvas_nav(); ?>
+		<?php lana_off_canvas_nav(); ?>
 				
 	</div>
 

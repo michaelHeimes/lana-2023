@@ -19,21 +19,21 @@ function custom_post_example() {
 	register_post_type( 'custom_type', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
 	 	// let's now add all the options for this post type
 		array('labels' => array(
-			'name' => __('Custom Types', 'lanalearn'), /* This is the Title of the Group */
-			'singular_name' => __('Custom Post', 'lanalearn'), /* This is the individual type */
-			'all_items' => __('All Custom Posts', 'lanalearn'), /* the all items menu item */
-			'add_new' => __('Add New', 'lanalearn'), /* The add new menu item */
-			'add_new_item' => __('Add New Custom Type', 'lanalearn'), /* Add New Display Title */
-			'edit' => __( 'Edit', 'lanalearn' ), /* Edit Dialog */
-			'edit_item' => __('Edit Post Types', 'lanalearn'), /* Edit Display Title */
-			'new_item' => __('New Post Type', 'lanalearn'), /* New Display Title */
-			'view_item' => __('View Post Type', 'lanalearn'), /* View Display Title */
-			'search_items' => __('Search Post Type', 'lanalearn'), /* Search Custom Type Title */ 
-			'not_found' =>  __('Nothing found in the Database.', 'lanalearn'), /* This displays if there are no entries yet */ 
-			'not_found_in_trash' => __('Nothing found in Trash', 'lanalearn'), /* This displays if there is nothing in the trash */
+			'name' => __('Custom Types', 'lana'), /* This is the Title of the Group */
+			'singular_name' => __('Custom Post', 'lana'), /* This is the individual type */
+			'all_items' => __('All Custom Posts', 'lana'), /* the all items menu item */
+			'add_new' => __('Add New', 'lana'), /* The add new menu item */
+			'add_new_item' => __('Add New Custom Type', 'lana'), /* Add New Display Title */
+			'edit' => __( 'Edit', 'lana' ), /* Edit Dialog */
+			'edit_item' => __('Edit Post Types', 'lana'), /* Edit Display Title */
+			'new_item' => __('New Post Type', 'lana'), /* New Display Title */
+			'view_item' => __('View Post Type', 'lana'), /* View Display Title */
+			'search_items' => __('Search Post Type', 'lana'), /* Search Custom Type Title */ 
+			'not_found' =>  __('Nothing found in the Database.', 'lana'), /* This displays if there are no entries yet */ 
+			'not_found_in_trash' => __('Nothing found in Trash', 'lana'), /* This displays if there is nothing in the trash */
 			'parent_item_colon' => ''
 			), /* end of arrays */
-			'description' => __( 'This is the example custom post type', 'lanalearn' ), /* Custom Type Description */
+			'description' => __( 'This is the example custom post type', 'lana' ), /* Custom Type Description */
 			'public' => true,
 			'publicly_queryable' => true,
 			'exclude_from_search' => false,
@@ -70,16 +70,16 @@ function custom_post_example() {
     	array('custom_type'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
     	array('hierarchical' => true,     /* if this is true, it acts like categories */             
     		'labels' => array(
-    			'name' => __( 'Custom Categories', 'lanalearn' ), /* name of the custom taxonomy */
-    			'singular_name' => __( 'Custom Category', 'lanalearn' ), /* single taxonomy name */
-    			'search_items' =>  __( 'Search Custom Categories', 'lanalearn' ), /* search title for taxomony */
-    			'all_items' => __( 'All Custom Categories', 'lanalearn' ), /* all title for taxonomies */
-    			'parent_item' => __( 'Parent Custom Category', 'lanalearn' ), /* parent title for taxonomy */
-    			'parent_item_colon' => __( 'Parent Custom Category:', 'lanalearn' ), /* parent taxonomy title */
-    			'edit_item' => __( 'Edit Custom Category', 'lanalearn' ), /* edit custom taxonomy title */
-    			'update_item' => __( 'Update Custom Category', 'lanalearn' ), /* update title for taxonomy */
-    			'add_new_item' => __( 'Add New Custom Category', 'lanalearn' ), /* add new title for taxonomy */
-    			'new_item_name' => __( 'New Custom Category Name', 'lanalearn' ) /* name title for taxonomy */
+    			'name' => __( 'Custom Categories', 'lana' ), /* name of the custom taxonomy */
+    			'singular_name' => __( 'Custom Category', 'lana' ), /* single taxonomy name */
+    			'search_items' =>  __( 'Search Custom Categories', 'lana' ), /* search title for taxomony */
+    			'all_items' => __( 'All Custom Categories', 'lana' ), /* all title for taxonomies */
+    			'parent_item' => __( 'Parent Custom Category', 'lana' ), /* parent title for taxonomy */
+    			'parent_item_colon' => __( 'Parent Custom Category:', 'lana' ), /* parent taxonomy title */
+    			'edit_item' => __( 'Edit Custom Category', 'lana' ), /* edit custom taxonomy title */
+    			'update_item' => __( 'Update Custom Category', 'lana' ), /* update title for taxonomy */
+    			'add_new_item' => __( 'Add New Custom Category', 'lana' ), /* add new title for taxonomy */
+    			'new_item_name' => __( 'New Custom Category Name', 'lana' ) /* name title for taxonomy */
     		),
     		'show_admin_column' => true, 
     		'show_ui' => true,
@@ -93,16 +93,16 @@ function custom_post_example() {
     	array('custom_type'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
     	array('hierarchical' => false,    /* if this is false, it acts like tags */                
     		'labels' => array(
-    			'name' => __( 'Custom Tags', 'lanalearn' ), /* name of the custom taxonomy */
-    			'singular_name' => __( 'Custom Tag', 'lanalearn' ), /* single taxonomy name */
-    			'search_items' =>  __( 'Search Custom Tags', 'lanalearn' ), /* search title for taxomony */
-    			'all_items' => __( 'All Custom Tags', 'lanalearn' ), /* all title for taxonomies */
-    			'parent_item' => __( 'Parent Custom Tag', 'lanalearn' ), /* parent title for taxonomy */
-    			'parent_item_colon' => __( 'Parent Custom Tag:', 'lanalearn' ), /* parent taxonomy title */
-    			'edit_item' => __( 'Edit Custom Tag', 'lanalearn' ), /* edit custom taxonomy title */
-    			'update_item' => __( 'Update Custom Tag', 'lanalearn' ), /* update title for taxonomy */
-    			'add_new_item' => __( 'Add New Custom Tag', 'lanalearn' ), /* add new title for taxonomy */
-    			'new_item_name' => __( 'New Custom Tag Name', 'lanalearn' ) /* name title for taxonomy */
+    			'name' => __( 'Custom Tags', 'lana' ), /* name of the custom taxonomy */
+    			'singular_name' => __( 'Custom Tag', 'lana' ), /* single taxonomy name */
+    			'search_items' =>  __( 'Search Custom Tags', 'lana' ), /* search title for taxomony */
+    			'all_items' => __( 'All Custom Tags', 'lana' ), /* all title for taxonomies */
+    			'parent_item' => __( 'Parent Custom Tag', 'lana' ), /* parent title for taxonomy */
+    			'parent_item_colon' => __( 'Parent Custom Tag:', 'lana' ), /* parent taxonomy title */
+    			'edit_item' => __( 'Edit Custom Tag', 'lana' ), /* edit custom taxonomy title */
+    			'update_item' => __( 'Update Custom Tag', 'lana' ), /* update title for taxonomy */
+    			'add_new_item' => __( 'Add New Custom Tag', 'lana' ), /* add new title for taxonomy */
+    			'new_item_name' => __( 'New Custom Tag Name', 'lana' ) /* name title for taxonomy */
     		),
     		'show_admin_column' => true,
     		'show_ui' => true,

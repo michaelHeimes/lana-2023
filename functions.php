@@ -1,10 +1,10 @@
 <?php
 /**
- * Lana Learn functions and definitions
+ * Lana functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package lanalearn
+ * @package lana
  */
 
 if ( ! defined( '_S_VERSION' ) ) {
@@ -19,14 +19,14 @@ if ( ! defined( '_S_VERSION' ) ) {
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function lanalearn_setup() {
+function lana_setup() {
 	/*
 		* Make theme available for translation.
 		* Translations can be filed in the /languages/ directory.
-		* If you're building a theme based on lanalearn, use a find and replace
-		* to change 'lanalearn' to the name of your theme in all the template files.
+		* If you're building a theme based on lana, use a find and replace
+		* to change 'lana' to the name of your theme in all the template files.
 		*/
-	load_theme_textdomain( 'lanalearn', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'lana', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -52,7 +52,7 @@ function lanalearn_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	// register_nav_menus(
 	// 	array(
-	// 		'menu-1' => esc_html__( 'Primary', 'lanalearn' ),
+	// 		'menu-1' => esc_html__( 'Primary', 'lana' ),
 	// 	)
 	// );
 
@@ -77,7 +77,7 @@ function lanalearn_setup() {
 	add_theme_support(
 		'custom-background',
 		apply_filters(
-			'lanalearn_custom_background_args',
+			'lana_custom_background_args',
 			array(
 				'default-color' => 'ffffff',
 				'default-image' => '',
@@ -104,7 +104,7 @@ function lanalearn_setup() {
 		)
 	);
 }
-add_action( 'after_setup_theme', 'lanalearn_setup' );
+add_action( 'after_setup_theme', 'lana_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -113,22 +113,22 @@ add_action( 'after_setup_theme', 'lanalearn_setup' );
  *
  * @global int $content_width
  */
-function lanalearn_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'lanalearn_content_width', 640 );
+function lana_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'lana_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'lanalearn_content_width', 0 );
+add_action( 'after_setup_theme', 'lana_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function lanalearn_widgets_init() {
+function lana_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'lanalearn' ),
+			'name'          => esc_html__( 'Sidebar', 'lana' ),
 			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', 'lanalearn' ),
+			'description'   => esc_html__( 'Add widgets here.', 'lana' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -138,8 +138,8 @@ function lanalearn_widgets_init() {
 	
 	register_sidebar(array(
 		'id' => 'offcanvas',
-		'name' => __('Offcanvas', 'lanalearn'),
-		'description' => __('The offcanvas sidebar.', 'lanalearn'),
+		'name' => __('Offcanvas', 'lana'),
+		'description' => __('The offcanvas sidebar.', 'lana'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
@@ -147,27 +147,27 @@ function lanalearn_widgets_init() {
 	));
 	
 }
-add_action( 'widgets_init', 'lanalearn_widgets_init' );
+add_action( 'widgets_init', 'lana_widgets_init' );
 
 
 /**
  * Enqueue scripts and styles.
  */
-function lanalearn_scripts() {
-	wp_enqueue_style( 'lanalearn-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_style_add_data( 'lanalearn-style', 'rtl', 'replace' );
+function lana_scripts() {
+	wp_enqueue_style( 'lana-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_style_add_data( 'lana-style', 'rtl', 'replace' );
 	
-	wp_enqueue_style( 'lanalearn-style-min', get_template_directory_uri() . '/assets/styles/style.min.css', array(), _S_VERSION );
+	wp_enqueue_style( 'lana-style-min', get_template_directory_uri() . '/assets/styles/style.min.css', array(), _S_VERSION );
 	
 	wp_enqueue_script( 'app-js', get_template_directory_uri() . '/assets/scripts/app.min.js', array('jquery'), _S_VERSION, true );
 	
-	//wp_enqueue_script( 'lanalearn-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	//wp_enqueue_script( 'lana-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'lanalearn_scripts' );
+add_action( 'wp_enqueue_scripts', 'lana_scripts' );
 
 
 // Disable Tabelpress Stylesheet
@@ -230,7 +230,7 @@ require_once(get_template_directory().'/inc/acf-options.php');
 //require_once(get_template_directory().'/inc/acf-blocks.php');
 
 // Disable Gutenberg
-require_once(get_template_directory().'/inc/disable-gutenberg.php'); 
+//require_once(get_template_directory().'/inc/disable-gutenberg.php'); 
 
 // Add Page Slug to Body Class
 // require_once(get_template_directory().'/inc/page-slug-body-class.php');

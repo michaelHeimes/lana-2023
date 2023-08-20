@@ -1,6 +1,6 @@
 <?php
 // Comment Layout
-function lanalearn_comments($comment, $args, $depth) {
+function lana_comments($comment, $args, $depth) {
    $GLOBALS['comment'] = $comment; ?>
 	<li <?php comment_class('panel'); ?>>
 		<div class="media-object">
@@ -14,13 +14,13 @@ function lanalearn_comments($comment, $args, $depth) {
 							// create variable
 							$bgauthemail = get_comment_author_email();
 						?>
-						<?php printf(__('%s', 'lanalearn'), get_comment_author_link()) ?> on
-						<time datetime="<?php echo comment_time('Y-m-j'); ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time(__(' F jS, Y - g:ia', 'lanalearn')); ?> </a></time>
-						<?php edit_comment_link(__('(Edit)', 'lanalearn'),'  ','') ?>
+						<?php printf(__('%s', 'lana'), get_comment_author_link()) ?> on
+						<time datetime="<?php echo comment_time('Y-m-j'); ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time(__(' F jS, Y - g:ia', 'lana')); ?> </a></time>
+						<?php edit_comment_link(__('(Edit)', 'lana'),'  ','') ?>
 					</header>
 					<?php if ($comment->comment_approved == '0') : ?>
 						<div class="alert alert-info">
-							<p><?php _e('Your comment is awaiting moderation.', 'lanalearn') ?></p>
+							<p><?php _e('Your comment is awaiting moderation.', 'lana') ?></p>
 						</div>
 					<?php endif; ?>
 					<section class="comment_content clearfix">

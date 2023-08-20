@@ -3,12 +3,12 @@
 
 /************* CUSTOMIZE ADMIN *******************/
 // Custom Backend Footer
-function lanalearn_custom_admin_footer() {
-// 	_e('<span id="footer-thankyou">Developed by <a href="https://proprdesign.com/" target="_blank">Propr Design</a></span>.', 'lanalearn');
+function lana_custom_admin_footer() {
+// 	_e('<span id="footer-thankyou">Developed by <a href="https://proprdesign.com/" target="_blank">Propr Design</a></span>.', 'lana');
 }
 
 // adding it to the admin area
-add_filter('admin_footer_text', 'lanalearn_custom_admin_footer');
+add_filter('admin_footer_text', 'lana_custom_admin_footer');
 
 /* WP Editor
  */

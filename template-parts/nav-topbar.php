@@ -13,6 +13,6 @@
 		</ul>
 	</div>
 	<div class="top-bar-right">
-		<?php lanalearn_top_nav(); ?>
+		<?php lana_top_nav(); ?>
 	</div>
 </div>

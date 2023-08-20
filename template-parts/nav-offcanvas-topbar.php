@@ -6,7 +6,7 @@
  */
 ?>
 
-<div class="top-bar-wrap grid-container fluid">
+<div class="top-bar-wrap grid-container">
 
 	<div class="top-bar" id="top-bar-menu">
 	
@@ -23,10 +23,10 @@
 					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 					<?php
 				endif;
-				$lanalearn_description = get_bloginfo( 'description', 'display' );
-				if ( $lanalearn_description || is_customize_preview() ) :
+				$lana_description = get_bloginfo( 'description', 'display' );
+				if ( $lana_description || is_customize_preview() ) :
 					?>
-					<p class="site-description"><?php echo $lanalearn_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+					<p class="site-description"><?php echo $lana_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 				<?php endif; ?>
 			</div><!-- .site-branding -->
 		
@@ -44,6 +44,7 @@
 		<div class="top-bar-right show-for-tablet">
 			<div class="grid-x align-right">
 				<div class="cell shrink">
+					<?php lana_top_nav(); ?>
 				</div>
 			</div>
 		</div>

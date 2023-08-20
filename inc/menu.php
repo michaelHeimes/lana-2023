@@ -2,16 +2,16 @@
 // Register menus
 register_nav_menus(
 	array(
-		'main-nav'		=> __( 'The Main Menu', 'lanalearn' ),		// Main nav in header
-		'offcanvas-nav'	=> __( 'The Off-Canvas Menu', 'lanalearn' ),	// Off-Canvas nav
-		'footer-links'	=> __( 'Footer Links', 'lanalearn' ),		// Secondary nav in footer
-		'social-links'	=> __( 'Social Links', 'lanalearn' ),		// Social Nav
+		'main-nav'		=> __( 'The Main Menu', 'lana' ),		// Main nav in header
+		'offcanvas-nav'	=> __( 'The Off-Canvas Menu', 'lana' ),	// Off-Canvas nav
+		'footer-nav'	=> __( 'Footer Nav', 'lana' ),		// Secondary nav in footer
+		'social-links'	=> __( 'Social Links', 'lana' ),		// Social Nav
 	)
 );
 
 
 // The Top Menu
-function lanalearn_top_nav() {
+function lana_top_nav() {
 	wp_nav_menu(array(
 		'container'			=> false,						// Remove nav container
 		'menu_id'			=> 'main-nav',					// Adding custom nav id
@@ -35,7 +35,7 @@ class Topbar_Menu_Walker extends Walker_Nav_Menu {
 }
 
 // The Off Canvas Menu
-function lanalearn_off_canvas_nav() {
+function lana_off_canvas_nav() {
 	wp_nav_menu(array(
 		'container'			=> false,							// Remove nav container
 		'menu_id'			=> 'offcanvas-nav',					// Adding custom nav id
@@ -56,19 +56,19 @@ class Off_Canvas_Menu_Walker extends Walker_Nav_Menu {
 }
 
 // The Footer Menu
-function lanalearn_footer_links() {
+function lana_footer_nav() {
 	wp_nav_menu(array(
 		'container'			=> 'false',				// Remove nav container
-		'menu_id'			=> 'footer-links',		// Adding custom nav id
-		'menu_class'		=> 'menu',				// Adding custom nav class
-		'theme_location'	=> 'footer-links',		// Where it's located in the theme
+		'menu_id'			=> 'footer-nav',		// Adding custom nav id
+		'menu_class'		=> 'menu vertical',				// Adding custom nav class
+		'theme_location'	=> 'footer-nav',		// Where it's located in the theme
 		'depth'				=> 0,					// Limit the depth of the nav
 		'fallback_cb'		=> ''					// Fallback function
 	));
 } /* End Footer Menu */
 
 // The Social Links Menu
-function lanalearn_social_links() {
+function lana_social_links() {
 	wp_nav_menu(array(
 		'container'			=> 'false',				// Remove nav container
 		'menu_id'			=> 'social-links',		// Adding custom nav id
@@ -80,7 +80,7 @@ function lanalearn_social_links() {
 } /* End Social Links Menu */
 
 // Header Fallback Menu
-function lanalearn_main_nav_fallback() {
+function lana_main_nav_fallback() {
 	wp_page_menu( array(
 		'show_home'		=> true,
 		'menu_class'	=> '',		// Adding custom nav class
@@ -93,7 +93,7 @@ function lanalearn_main_nav_fallback() {
 }
 
 // Footer Fallback Menu
-function lanalearn_footer_links_fallback() {
+function lana_footer_links_fallback() {
 	/* You can put a default here if you like */
 }
 

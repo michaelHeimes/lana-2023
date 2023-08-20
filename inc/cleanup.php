@@ -1,29 +1,29 @@
 <?php
 
 // Fire all our initial functions at the start
-add_action('after_setup_theme','lanalearn_start', 16);
+add_action('after_setup_theme','lana_start', 16);
 
-function lanalearn_start() {
+function lana_start() {
 
     // launching operation cleanup
-    add_action('init', 'lanalearn_head_cleanup');
+    add_action('init', 'lana_head_cleanup');
 
     // remove pesky injected css for recent comments widget
-    add_filter( 'wp_head', 'lanalearn_remove_wp_widget_recent_comments_style', 1 );
+    add_filter( 'wp_head', 'lana_remove_wp_widget_recent_comments_style', 1 );
 
     // clean up comment styles in the head
-    add_action('wp_head', 'lanalearn_remove_recent_comments_style', 1);
+    add_action('wp_head', 'lana_remove_recent_comments_style', 1);
 
     // clean up gallery output in wp
-    add_filter('gallery_style', 'lanalearn_gallery_style');
+    add_filter('gallery_style', 'lana_gallery_style');
 
     // cleaning up excerpt
-    add_filter('excerpt_more', 'lanalearn_excerpt_more');
+    add_filter('excerpt_more', 'lana_excerpt_more');
 
 } /* end joints start */
 
 //The default wordpress head is a mess. Let's clean it up by removing all the junk we don't need.
-function lanalearn_head_cleanup() {
+function lana_head_cleanup() {
 	// Remove category feeds
 	// remove_action( 'wp_head', 'feed_links_extra', 3 );
 	// Remove post and comment feeds
@@ -45,14 +45,14 @@ function lanalearn_head_cleanup() {
 } /* end Joints head cleanup */
 
 // Remove injected CSS for recent comments widget
-function lanalearn_remove_wp_widget_recent_comments_style() {
+function lana_remove_wp_widget_recent_comments_style() {
    if ( has_filter('wp_head', 'wp_widget_recent_comments_style') ) {
       remove_filter('wp_head', 'wp_widget_recent_comments_style' );
    }
 }
 
 // Remove injected CSS from recent comments widget
-function lanalearn_remove_recent_comments_style() {
+function lana_remove_recent_comments_style() {
   global $wp_widget_factory;
   if (isset($wp_widget_factory->widgets['WP_Widget_Recent_Comments'])) {
     remove_action('wp_head', array($wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style'));
@@ -60,15 +60,15 @@ function lanalearn_remove_recent_comments_style() {
 }
 
 // Remove injected CSS from gallery
-function lanalearn_gallery_style($css) {
+function lana_gallery_style($css) {
   return preg_replace("!<style type='text/css'>(.*?)</style>!s", '', $css);
 }
 
 // This removes the annoying […] to a Read More link
-function lanalearn_excerpt_more($more) {
+function lana_excerpt_more($more) {
 	global $post;
 	// edit here if you like
-return '<a class="excerpt-read-more" href="'. get_permalink($post->ID) . '" title="'. __('Read', 'lanalearn') . get_the_title($post->ID).'">'. __('... Read more &raquo;', 'lanalearn') .'</a>';
+return '<a class="excerpt-read-more" href="'. get_permalink($post->ID) . '" title="'. __('Read', 'lana') . get_the_title($post->ID).'">'. __('... Read more &raquo;', 'lana') .'</a>';
 }
 
 //  Stop WordPress from using the sticky class (which conflicts with Foundation), and style WordPress sticky posts using the .wp-sticky class instead
@@ -83,14 +83,14 @@ function remove_sticky_class($classes) {
 add_filter('post_class','remove_sticky_class');
 
 //This is a modified the_author_posts_link() which just returns the link. This is necessary to allow usage of the usual l10n process with printf()
-function lanalearn_get_the_author_posts_link() {
+function lana_get_the_author_posts_link() {
 	global $authordata;
 	if ( !is_object( $authordata ) )
 		return false;
 	$link = sprintf(
 		'<a href="%1$s" title="%2$s" rel="author">%3$s</a>',
 		get_author_posts_url( $authordata->ID, $authordata->user_nicename ),
-		esc_attr( sprintf( __( 'Posts by %s', 'lanalearn' ), get_the_author() ) ), // No further l10n needed, core will take care of this one
+		esc_attr( sprintf( __( 'Posts by %s', 'lana' ), get_the_author() ) ), // No further l10n needed, core will take care of this one
 		get_the_author()
 	);
 	return $link;
