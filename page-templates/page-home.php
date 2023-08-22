@@ -35,7 +35,7 @@ $fields = get_fields();
 								<?php if( !empty($fields['s1_section_title']) || !empty($fields['s1_left_column_copy']) || !empty($fields['s1_right_column']) ):?>
 								<div class="grid-x grid-padding-x">
 									<?php if( !empty($fields['s1_section_title']) ):?>
-									<div class="cell small-12 medium-3">
+									<div class="cell small-12 medium-3 tablet-2">
 										<div class="grid-x align-middle">
 											<?php get_template_part('template-parts/svg', 'number-one', '');?>
 											<svg width="30" height="1" viewBox="0 0 30 1" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M29 0.5H1" stroke="#1B1B1B" stroke-linecap="square"/></svg>
@@ -46,7 +46,7 @@ $fields = get_fields();
 									</div>
 									<?php endif;?>
 									<?php if( !empty($fields['s1_left_column_copy']) || !empty($fields['s1_right_column']) || !empty($fields['s1_service_ctas']) ):?>
-										<div class="cell small-12 medium-9">
+										<div class="cell small-12 medium-9 tablet-10">
 											<div class="grid-x grid-padding-x">
 												<div class="cell small-12 tablet-6">
 													<?php echo $fields['s1_left_column_copy'];?>
@@ -181,42 +181,44 @@ $fields = get_fields();
 						<div class="section s2">
 							<?php if( !empty( $fields['s2_section_title'] ) || !empty( $fields['s2_copy_heading'] ) || !empty( $fields['s2_copy'] ) || !empty( $fields['s2_image'] ) ):?>
 							<div class="white-bg">
-								<div class="grid-x grid-padding-x">
-									<?php if( !empty($fields['s2_section_title']) ):?>
-									<div class="cell small-12 medium-3">
-										<div class="grid-x align-middle">
-											<?php get_template_part('template-parts/svg', 'number-two', '');?>
-											<svg width="30" height="1" viewBox="0 0 30 1" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M29 0.5H1" stroke="#1B1B1B" stroke-linecap="square"/></svg>
-											<h2 class="h5">
-												<?php echo esc_attr( $fields['s2_section_title'] );?>
-											</h2>
+								<div class="grid-container">
+									<div class="grid-x grid-padding-x">
+										<?php if( !empty($fields['s2_section_title']) ):?>
+										<div class="cell small-12 medium-3 tablet-2">
+											<div class="grid-x align-middle">
+												<?php get_template_part('template-parts/svg', 'number-two', '');?>
+												<svg width="30" height="1" viewBox="0 0 30 1" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M29 0.5H1" stroke="#1B1B1B" stroke-linecap="square"/></svg>
+												<h2 class="h5">
+													<?php echo esc_attr( $fields['s2_section_title'] );?>
+												</h2>
+											</div>
 										</div>
-									</div>
-									<?php endif; ?>
-									<?php if( !empty( $fields['s2_copy_heading'] ) || !empty( $fields['s2_copy'] ) || !empty( $fields['s2_image'] ) ):?>
-									<div class="cell small-12 medium-9">
-										<div class="copy-image grid-x grid-padding-x tablet-flex-dir-row-reverse align-right">
-											<?php if( !empty( $fields['s2_image'] ) ) {
-												$imgID = $fields['s2_image']['ID'];
-												$img_alt = trim( strip_tags( get_post_meta( $imgID, '_wp_attachment_image_alt', true ) ) );
-												$img = wp_get_attachment_image( $imgID, 'full', false, [ "class" => "", "alt"=>$img_alt] );
-												echo '<div class="cell small-12 tablet-5 tablet-offset-1 img-wrap">';
-												echo $img;
-												echo '</div>';
-											}?>
-											<?php if( !empty( $fields['s2_copy_heading'] ) || !empty( $fields['s2_copy'] ) ):?>
-												<div class="cell small-12 tablet-5 xlarge-4">
-												<?php if( !empty( $fields['s2_copy_heading'] ) ) {
-													echo '<h2>' . esc_attr( $fields['s2_copy_heading'] ) . '</h2>';
-												};?>
-												<?php if( !empty( $fields['s2_copy'] ) ) {
-													echo '<div>' . $fields['s2_copy'] . '</div>';
-												};?>
-												</div>
-											<?php endif; ?>
+										<?php endif; ?>
+										<?php if( !empty( $fields['s2_copy_heading'] ) || !empty( $fields['s2_copy'] ) || !empty( $fields['s2_image'] ) ):?>
+										<div class="cell small-12 medium-9 tablet-10">
+											<div class="copy-image grid-x grid-padding-x tablet-flex-dir-row-reverse align-right">
+												<?php if( !empty( $fields['s2_image'] ) ) {
+													$imgID = $fields['s2_image']['ID'];
+													$img_alt = trim( strip_tags( get_post_meta( $imgID, '_wp_attachment_image_alt', true ) ) );
+													$img = wp_get_attachment_image( $imgID, 'full', false, [ "class" => "", "alt"=>$img_alt] );
+													echo '<div class="cell small-12 tablet-6 tablet-offset-1 img-wrap">';
+													echo $img;
+													echo '</div>';
+												}?>
+												<?php if( !empty( $fields['s2_copy_heading'] ) || !empty( $fields['s2_copy'] ) ):?>
+													<div class="cell small-12 tablet-5 xlarge-4">
+													<?php if( !empty( $fields['s2_copy_heading'] ) ) {
+														echo '<h2>' . esc_attr( $fields['s2_copy_heading'] ) . '</h2>';
+													};?>
+													<?php if( !empty( $fields['s2_copy'] ) ) {
+														echo '<div>' . $fields['s2_copy'] . '</div>';
+													};?>
+													</div>
+												<?php endif; ?>
+											</div>
 										</div>
+										<?php endif; ?>
 									</div>
-									<?php endif; ?>
 								</div>
 							</div>	
 							<?php endif; ?>
