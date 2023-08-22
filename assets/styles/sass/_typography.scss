@@ -33,10 +33,20 @@ button,
 	text-transform: uppercase;
 	letter-spacing: .041666em;
 }
+a.arrow-link {
+	font-size: rem-calc(14);
+	font-weight: 600;
+	line-height: 1;
+	text-transform: uppercase;
+	letter-spacing: .0357em;
+}
 .menu a {
 	font-weight: 600;
 }
 button,
 .button {
 	font-weight: 700;
+}
+.color-white {
+	color: $white;
 }

@@ -1,3 +1,38 @@
+.has-object-fit {
+	position: relative;
+	overflow: hidden;
+	
+	img.object-fit {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		
+		&.cover,
+		&.contain {
+			
+			&.top {
+				object-position: top;
+			}
+			
+			&.of-bottom {
+				object-position: bottom;
+			}
+			
+		}
+		
+		&.cover {
+			object-fit: cover;
+		}
+		
+		&.contain {
+			object-fit: contain;
+		}
+		
+	}
+	
+}
 .black-bg {
 	background-color: $black;
 	color: $white;
@@ -5,9 +40,21 @@
 		color: $white;
 	}
 }
+.white-bg {
+	background-color: $white;
+}
 .granite-bg {
-	background-color: $granite;
+	background-color: $color-granite;
 }
 .blue-violet-gradient-bg {
 	background-image: linear-gradient(-39.61deg, #3304BF 47.789%, #5021D9 100%);
+}
+.grid-pattern {
+	background-image: linear-gradient($color-granite 1px, transparent 1px), linear-gradient(90deg, $color-granite 1px, transparent 1px);
+	background-size: 17px 17px;
+	background-position: center;
+}
+.br-12 {
+	overflow: hidden;
+	border-radius: $global-radius;
 }
