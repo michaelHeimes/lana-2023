@@ -1,0 +1,47 @@
+{
+    "key": "group_64ece78582c94",
+    "title": "Pages",
+    "fields": [
+        {
+            "key": "field_64ece78569bf7",
+            "label": "Add Bottom Padding to Page Content",
+            "name": "add_bottom_padding_to_page_content",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Check this if the last element doesn't have bottom spacing and you don't want it flush against the footer.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "default"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1693247508
+}

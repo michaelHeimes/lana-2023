@@ -1,13 +1,18 @@
 <?php
+if( !empty($args['hero-banner']) ) {
 	$hero_banner = $args['hero-banner'];
-	$background_image = $hero_banner['background_image'];
-	$eyebrow = $hero_banner['eyebrow'];
-	$pre_heading_text = $hero_banner['pre_heading_text'];
-	$large_heading = $hero_banner['large_heading'];
-	$button_link = $hero_banner['button_link'];
-	$bottom_right_logo = $hero_banner['bottom_right_logo'];
+}
+if( !empty( get_sub_field('hero_banner') ) ) {
+	$hero_banner = get_sub_field('hero_banner');
+}
+$background_image = $hero_banner['background_image'];
+$eyebrow = $hero_banner['eyebrow'];
+$pre_heading_text = $hero_banner['pre_heading_text'];
+$large_heading = $hero_banner['large_heading'];
+$button_link = $hero_banner['button_link'];
+$bottom_right_logo = $hero_banner['bottom_right_logo'];
 ?>
-<header class="entry-header home-banner">
+<header class="entry-header hero-banner">
 	<div class="grid-container">
 		<div class="grid-x grid-padding-x">
 			<div class="cell small-12">
@@ -17,6 +22,7 @@
 						$img_alt = trim( strip_tags( get_post_meta( $imgID, '_wp_attachment_image_alt', true ) ) );
 						$img = wp_get_attachment_image( $imgID, 'full', false, [ "class" => "object-fit cover", "alt"=>$img_alt] );
 						echo $img;
+						echo '<div class="mask grid-pattern white over-image"></div>';
 					}?>
 					<div class="content-wrap relative">
 						<?php if( !empty($eyebrow) ) {

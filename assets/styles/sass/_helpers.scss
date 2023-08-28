@@ -33,6 +33,16 @@
 	}
 	
 }
+.relative {
+	position: relative;
+}
+.mask {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
 .black-bg {
 	background-color: $black;
 	color: $white;
@@ -47,12 +57,21 @@
 	background-color: $color-granite;
 }
 .blue-violet-gradient-bg {
-	background-image: linear-gradient(-39.61deg, #3304BF 47.789%, #5021D9 100%);
+	background-image: linear-gradient(39.61deg,#160058 0%,#5021D9 100%);
+	background-image: linear-gradient(39.61deg, #160058, #1c006a, #21017d, #270190, #2c02a4, #3105af, #3609ba, #3b0dc5, #4013ca, #4618cf, #4b1dd4, #5021d9);
 }
 .grid-pattern {
-	background-image: linear-gradient($color-granite 1px, transparent 1px), linear-gradient(90deg, $color-granite 1px, transparent 1px);
 	background-size: 17px 17px;
 	background-position: center;
+	&.white {
+		background-image: linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px);
+	}
+	&.granite {
+		background-image: linear-gradient($color-granite 1px, transparent 1px), linear-gradient(90deg, $color-granite 1px, transparent 1px);
+	}
+	&.over-image {
+		opacity: .1;
+	}
 }
 .br-12 {
 	overflow: hidden;

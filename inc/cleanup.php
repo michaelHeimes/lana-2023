@@ -68,8 +68,19 @@ function lana_gallery_style($css) {
 function lana_excerpt_more($more) {
 	global $post;
 	// edit here if you like
-return '<a class="excerpt-read-more" href="'. get_permalink($post->ID) . '" title="'. __('Read', 'lana') . get_the_title($post->ID).'">'. __('... Read more &raquo;', 'lana') .'</a>';
+return __('...', 'lana') .'';
 }
+
+function custom_excerpt_length($length) {
+	return 16;
+}
+add_filter('excerpt_length', 'custom_excerpt_length');
+
+function custom_excerpt_more($more) {
+	return '...'; // Replace with the desired "read more" link or text
+}
+add_filter('excerpt_more', 'custom_excerpt_more');
+
 
 //  Stop WordPress from using the sticky class (which conflicts with Foundation), and style WordPress sticky posts using the .wp-sticky class instead
 function remove_sticky_class($classes) {

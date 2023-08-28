@@ -1,0 +1,321 @@
+{
+    "key": "group_64eb97a18beb1",
+    "title": "Page Modules",
+    "fields": [
+        {
+            "key": "field_64eb97a170a48",
+            "label": "Page Modules",
+            "name": "page_modules",
+            "aria-label": "",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_64ecb235e20a2": {
+                    "key": "layout_64ecb235e20a2",
+                    "name": "hero_banner_module",
+                    "label": "Hero Banner",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_64ecb241e20a5",
+                            "label": "Hero Banner",
+                            "name": "hero_banner_clone",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_64e20b3cebc78"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_64eb97ac6037a": {
+                    "key": "layout_64eb97ac6037a",
+                    "name": "page_banner_copy_button_link_and_image_module",
+                    "label": "Page Banner (Copy, Button Link, and Image)",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_64eb97e070a49",
+                            "label": "Page Banner (Copy, Button Link, and Image)",
+                            "name": "page_banner_copy_button_link_and_image_module",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_64e289603c2df"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_64ecb840d0cd9": {
+                    "key": "layout_64ecb840d0cd9",
+                    "name": "centered_quote_module",
+                    "label": "Centered Quote",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_64ecb84bd0cdc",
+                            "label": "Centered Quote",
+                            "name": "centered_quote_clone",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_64ecb80316df9"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_64eb9fe3f4699": {
+                    "key": "layout_64eb9fe3f4699",
+                    "name": "three-column_icon_text_module",
+                    "label": "Three-column: Icon & Text",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_64eb9feef469c",
+                            "label": "Three-column: Icon & Text",
+                            "name": "three-column:_icon_&_text_clone",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_64eb9f4de5b28"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_64ebc13ec08fe": {
+                    "key": "layout_64ebc13ec08fe",
+                    "name": "images_copy_module",
+                    "label": "Image(s) & Copy",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_64ebc152c0901",
+                            "label": "Image(s) & Copy",
+                            "name": "images_copy_clone",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_64ebbda447d5a"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_64ecc4376dd19": {
+                    "key": "layout_64ecc4376dd19",
+                    "name": "lana_module",
+                    "label": "LANA",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_64ecc4496dd1c",
+                            "label": "Eyebrow\/Heading Left, Copy Right",
+                            "name": "eyebrowheading_left_copy_right_clone",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_64e28ae1ef17b"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_64ecc5566dd1d",
+                            "label": "Image & L-A-N-A",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "This is a global element and can be edited in Theme Settings.",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_64ecd1ad0b981": {
+                    "key": "layout_64ecd1ad0b981",
+                    "name": "team_members_module",
+                    "label": "Team Members",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_64ecd2610b984",
+                            "label": "Team Mambers",
+                            "name": "team_mambers_clone",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_64ecd11b5c8dd"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_64ecddd89e42d": {
+                    "key": "layout_64ecddd89e42d",
+                    "name": "cta_copy_left_buttons_right_module",
+                    "label": "CTA: Copy Left, Buttons Right",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_64ecdf9e22b21",
+                            "label": "CTA: Copy Left, Buttons Right",
+                            "name": "cta_copy_left_buttons_right_clone",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_64ecde1ce19aa"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "min": "",
+            "max": "",
+            "button_label": "Add Module"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "default"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1693246118
+}

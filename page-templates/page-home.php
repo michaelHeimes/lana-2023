@@ -81,7 +81,7 @@ $fields = get_fields();
 															?> 
 																	<div class="relative text-wrap">
 																		<h3><?php echo esc_html( $link_title );?></h3>
-																		<div class="arrow-link">
+																		<div class="arrow-link grid-x align-middle">
 																			<span>Read More</span>
 																			<?php get_template_part('template-parts/svg', 'arrow-white');?>
 																		</div>
@@ -131,7 +131,7 @@ $fields = get_fields();
 								<?php endif;?>
 								
 								<?php if( !empty( $fields['s1_clients_heading'] ) || !empty( $fields['s1_clients_arrow_link'] ) ):?>
-								<div class="white-bg grid-pattern br-12">
+								<div class="white-bg grid-pattern granite br-12">
 									<div class="section-top grid-x grid-padding-x align-middle">
 										<?php if( !empty( $fields['s1_clients_heading'] ) ):?>
 										<div class="cell small-12 medium-auto">
@@ -145,7 +145,7 @@ $fields = get_fields();
 											$link_target = $link['target'] ? $link['target'] : '_self';
 											?>
 										<div class="cell small-12 medium-shrink">
-											<a class="arrow-link grid-x align-middle" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
+											<a class="arrow-link grid-x align-middle grid-x align-middle" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
 												<span><?php echo esc_html( $link_title ); ?></span>
 												<?php get_template_part('template-parts/svg', 'arrow-violet');?>
 											</a>
@@ -201,8 +201,11 @@ $fields = get_fields();
 													$imgID = $fields['s2_image']['ID'];
 													$img_alt = trim( strip_tags( get_post_meta( $imgID, '_wp_attachment_image_alt', true ) ) );
 													$img = wp_get_attachment_image( $imgID, 'full', false, [ "class" => "", "alt"=>$img_alt] );
-													echo '<div class="cell small-12 tablet-6 tablet-offset-1 img-wrap">';
+													echo '<div class="cell small-12 tablet-6 tablet-offset-1">';
+													echo '<div class="img-wrap br-12 relative">';
 													echo $img;
+													echo '<div class="mask grid-pattern white over-image"></div>';
+													echo '</div>';
 													echo '</div>';
 												}?>
 												<?php if( !empty( $fields['s2_copy_heading'] ) || !empty( $fields['s2_copy'] ) ):?>
@@ -222,17 +225,70 @@ $fields = get_fields();
 								</div>
 							</div>	
 							<?php endif; ?>
-							<div class="grid-container">
-								
-							</div>
+							<?php if( !empty( $fields['news_cta'] ) ) {
+								get_template_part('template-parts/part', 'news-cta', 
+									array(
+										'news-cta' => $fields['news_cta'],
+									)
+								);
+							}?>
 						</div>
 						<?php endif; ?>
+
+						
+						<?php if( !empty($fields['s3_section_title']) || !empty( $fields['eyebrowheading_left_copy_right'] ) || !empty( get_field('image_and_l-a-n-a', 'option') ) || !empty(get_field('img-lana_leadership_text', 'option') ) ):?>
+						<div class="section s3">
+							<div class="grid-container">
+
+								<?php if( !empty($fields['s3_section_title']) || !empty( $fields['eyebrowheading_left_copy_right'] ) || !empty(get_field('img-lana_image', 'option') ) ):?>
+								<div class="grid-x grid-padding-x">
+									<?php if( !empty($fields['s3_section_title']) ):?>
+									<div class="cell small-12 medium-3 tablet-2">
+										<div class="grid-x align-middle">
+											<?php get_template_part('template-parts/svg', 'number-one', '');?>
+											<svg width="30" height="1" viewBox="0 0 30 1" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M29 0.5H1" stroke="#1B1B1B" stroke-linecap="square"/></svg>
+											<h2 class="h5">
+												<?php echo esc_attr( $fields['s3_section_title'] );?>
+											</h2>
+										</div>
+									</div>
+									<?php endif;?>
+									<?php if( !empty($fields['s1_left_column_copy']) || !empty($fields['s1_right_column']) || !empty($fields['s1_service_ctas']) ):?>
+										<div class="cell small-12 medium-9 tablet-10">
+											<?php if( !empty( $fields['eyebrowheading_left_copy_right'] ) ) {
+												get_template_part('template-parts/part', 'eyebrowheading_left_copy_right', 
+													array(
+														'eyebrowheading_left_copy_right' => $fields['eyebrowheading_left_copy_right'],
+													)
+												);
+											};?>
+										</div>
+									<?php endif;?>
+								</div>
+								<?php endif;?>
+							</div>
+								
+								<?php if( !empty( get_field('image_and_l-a-n-a', 'option') ) ):
+									$image_and_lana = get_field('image_and_l-a-n-a', 'option');
+
+									get_template_part('template-parts/part', 'image_and_lana',
+										array(
+											'image_and_lana' => $image_and_lana,
+											'alignment' => 'align-right',
+										)
+									);
+
+								endif;?>
+								
+						</div>
+						<?php endif;?>
+						
 					</section> <!-- end article section -->
 					
 					<footer class="article-footer">
 					</footer> <!-- end article footer -->
 						
-				</article><!-- #post-<?php the_ID(); ?> -->
+				</article>
 		
 			</main><!-- #main -->
 				

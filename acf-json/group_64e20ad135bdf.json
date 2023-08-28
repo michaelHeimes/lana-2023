@@ -210,7 +210,7 @@
             "max_height": "",
             "max_size": "",
             "mime_types": "",
-            "preview_size": "medium"
+            "preview_size": "thumbnail"
         },
         {
             "key": "field_64e25e9267587",
@@ -505,72 +505,12 @@
             "preview_size": "thumbnail"
         },
         {
-            "key": "field_64e279d7df37c",
-            "label": "Student Success Eyebrow",
-            "name": "s2_student_success_eyebrow",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_64e27a12df37d",
-            "label": "Student Success Heading",
-            "name": "s2_student_success_heading",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_64e27a25df37e",
-            "label": "Student Success Copy",
-            "name": "s2_student_success_copy",
-            "aria-label": "",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "basic",
-            "media_upload": 1,
-            "delay": 0
-        },
-        {
-            "key": "field_64e27a46df37f",
+            "key": "field_64ea03e49323e",
             "label": "Student Success Posts",
-            "name": "student_success_posts",
+            "name": "s2_student_success_posts_clone",
             "aria-label": "",
-            "type": "relationship",
-            "instructions": "If no posts are selected, the most recent three appear.",
+            "type": "clone",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -578,24 +518,13 @@
                 "class": "",
                 "id": ""
             },
-            "post_type": [
-                "news_post"
+            "clone": [
+                "field_64ea02d666381"
             ],
-            "post_status": "",
-            "taxonomy": [
-                "news_type:student-success"
-            ],
-            "filters": [
-                "search",
-                "post_type",
-                "taxonomy"
-            ],
-            "return_format": "object",
-            "min": "",
-            "max": 3,
-            "elements": "",
-            "bidirectional": 0,
-            "bidirectional_target": []
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
         },
         {
             "key": "field_64e28ef1de639",
@@ -671,7 +600,7 @@
                 "class": "",
                 "id": ""
             },
-            "message": "This is a global element and can ge edited in Theme Settings.",
+            "message": "This is a global element and can be edited in Theme Settings.",
             "new_lines": "wpautop",
             "esc_html": 0
         }
@@ -696,5 +625,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1692740360
+    "modified": 1693238607
 }

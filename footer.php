@@ -62,6 +62,20 @@
 								</div>
 								<?php endif;?>
 							</div>
+							<?php if( !empty( get_field('copyright_text', 'option') ) || wp_get_nav_menu_items('social-links') ):?>
+								<hr>
+								<div class="grid-x grid-padding-x flex-dir-column-reverse medium-flex-dir-row-reverse">
+									<?php if( wp_get_nav_menu_items('social-links') ) {
+										echo '<div class="cell small-12 tablet-shrink">';
+										lana_social_links();
+										echo '</div>';
+									}?>
+									<?php if( !empty( get_field('copyright_text', 'option') ) ){
+										$copyright_text = get_field('copyright_text', 'option');
+										echo '<div class="cell small-12 tablet-auto">&copy;' . esc_attr(date('Y')) . ' ' . $copyright_text . '</div>';
+									};?>
+								</div>
+							<?php endif;?>
 						</div>
 					</div><!-- .site-info -->
 				</footer><!-- #colophon -->

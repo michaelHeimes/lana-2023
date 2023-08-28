@@ -142,6 +142,57 @@
             
         });
     }
+    
+    _app.news_filter = function() {
+        const newsPosts = document.querySelector('.page-template-page-news #ajax-load-more');
+        if( newsPosts ) {
+            console.log('news');
+            /**
+             * Filter button click event.
+             *
+             * @param {*} event
+             */
+            function filterClick(event) {
+                event.preventDefault();
+             
+                // Exit if button active.
+                if (this.classList.contains('active')) {
+                    return;
+                }
+             
+                // Get .active element.
+                var activeEl = document.querySelector('.alm-filter-nav button.active');
+                if (activeEl) {
+                    activeEl.classList.remove('active');
+                }
+             
+                // Add active class.
+                this.classList.add('active');
+             
+                // Set filter params
+                var transition = 'fade';
+                var speed = 250;
+                var data = this.dataset;
+             
+                // Call core Ajax Load More `filter` function.
+                // @see https://connekthq.com/plugins/ajax-load-more/docs/public-functions/#filter
+                ajaxloadmore.filter(transition, speed, data);
+            }
+             
+            // Get all filter buttons.
+            var filter_buttons = document.querySelectorAll('.alm-filter-nav button');
+            if (filter_buttons) {
+                // Set initial active item.
+                filter_buttons[0].classList.add('active');
+             
+                // Loop buttons.
+                [].forEach.call(filter_buttons, function (button) {
+                    // Add button click event.
+                    button.addEventListener('click', filterClick);
+                });
+            }
+        }
+    }
             
     _app.init = function() {
         
@@ -153,6 +204,7 @@
         
         // Custom Functions
         //_app.mobile_takover_nav();
+        _app.news_filter();
     }
     
     
