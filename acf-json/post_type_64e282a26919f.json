@@ -63,7 +63,9 @@
     "plural_capability_name": "posts",
     "supports": [
         "title",
+        "author",
         "editor",
+        "excerpt",
         "thumbnail"
     ],
     "taxonomies": "",
@@ -80,5 +82,5 @@
     "can_export": true,
     "delete_with_user": false,
     "register_meta_box_cb": "",
-    "modified": 1692566307
+    "modified": 1693603385
 }

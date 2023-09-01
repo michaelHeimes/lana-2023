@@ -1,3 +1,7 @@
+button,
+.button {
+	cursor: pointer;
+}
 .has-object-fit {
 	position: relative;
 	overflow: hidden;
@@ -33,6 +37,9 @@
 	}
 	
 }
+.h-100 {
+	height: 100%;	
+}
 .relative {
 	position: relative;
 }
@@ -56,6 +63,7 @@
 .granite-bg {
 	background-color: $color-granite;
 }
+.alm-btn-wrap .alm-load-more-btn,
 .blue-violet-gradient-bg {
 	background-image: linear-gradient(39.61deg,#160058 0%,#5021D9 100%);
 	background-image: linear-gradient(39.61deg, #160058, #1c006a, #21017d, #270190, #2c02a4, #3105af, #3609ba, #3b0dc5, #4013ca, #4618cf, #4b1dd4, #5021d9);

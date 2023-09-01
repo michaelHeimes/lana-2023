@@ -1,6 +1,6 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class('cell'); ?> role="article">		
-	<div class="inner br-12">		
-		<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
+<article id="post-<?php the_ID(); ?>" <?php post_class('cell news-card'); ?> role="article">		
+	<div class="inner br-12 h-100">		
+		<a class="grid-x flex-dir-column h-100" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
 			<?php if( has_post_thumbnail( $post->ID ) ) {
 				echo '<div class="thumb-wrap">';
 				$minWidth = 880;
@@ -19,35 +19,54 @@
 				}
 				echo '</div>';
 			};?>
-			<div class="text-wrap white-bg">
-				<header class="article-header">
-					<?php
-					// Get the terms for the 'news_type' taxonomy assigned to the current post
-					$terms = get_the_terms(get_the_ID(), 'news_type');
-					
-					// Check if terms exist
-					if ($terms && !is_wp_error($terms)) {
-						$term_names = array();
-						foreach ($terms as $term) {
-							$term_names[] = $term->name;
-						}
+			<div class="text-wrap white-bg grid-x flex-dir-column">
+				<div class="top">
+					<header class="article-header">
+						<?php
+						// Get the terms for the 'news_type' taxonomy assigned to the current post
+						$terms = get_the_terms(get_the_ID(), 'news_type');
 						
-						// Output the term names separated by "//"
-						echo '<h6>';
-						echo implode(' // ', $term_names);
-						echo '</h6>';
-					}
-					?>
-					<h2 class="h4"><?php the_title(); ?></h2>			
-				</header> <!-- end article header -->	
-				<section class="entry-content" itemprop="text">
-					<?php if( !empty( get_field('excerpt_text') ) ) {
-						echo esc_attr( get_field('excerpt_text') );
-					} else {
-						the_excerpt();
-					};?>
-				</section> <!-- end article section -->
-									
+						// Check if terms exist
+						if ($terms && !is_wp_error($terms)) {
+							$term_names = array();
+							foreach ($terms as $term) {
+								$term_names[] = $term->name;
+							}
+							
+							// Output the term names separated by "//"
+							echo '<h6>';
+							echo implode(' // ', $term_names);
+							echo '</h6>';
+						}
+						?>
+						<h2 class="h4"><b><?php the_title(); ?></b></h2>			
+					</header> <!-- end article header -->	
+					<section class="entry-content" itemprop="text">
+						<?php if( !empty( get_field('excerpt_text') ) ) {
+							
+							echo esc_attr( get_field('excerpt_text', $post->ID) );
+							
+						} else {
+							
+							$excerpt = get_the_content();
+							
+							// Split the excerpt into words
+							$words = explode(' ', $excerpt);
+							
+							// Check if the number of words is greater than 16
+							if (count($words) > 16) {
+								// Shorten the excerpt to 16 words and add "..." to the last word
+								$shortened_excerpt = implode(' ', array_slice($words, 0, 16)) . ' ...';
+							} else {
+								// Use the original excerpt
+								$shortened_excerpt = $excerpt;
+							}
+							
+							echo wp_strip_all_tags($shortened_excerpt);
+					
+						};?>
+					</section> <!-- end article section -->
+				</div>
 				<footer class="article-footer">
 					<div class="arrow-link grid-x align-middle">
 						<span>Read More</span>
