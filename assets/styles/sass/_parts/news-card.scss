@@ -1,8 +1,18 @@
 .news-card {
+	margin-bottom: 1.25rem;
+	a {
+		&:hover {
+			color: $black;
+		}
+	}
 	.text-wrap {
 		flex: 1;
+		padding: 1.6rem 1.38rem 2rem;
 		.top {
 			flex: 1;
+			header.article-header {
+				padding-bottom: 0.15rem;
+			}
 		}	
 	}
 }

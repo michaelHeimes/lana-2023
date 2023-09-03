@@ -48,7 +48,7 @@
 								</div>
 								<?php endif;?>
 								<?php if( !empty( get_field('newsletter_title', 'option') ) || !empty( get_field('newsletter_text', 'option') ) || !empty( get_field('newsletter_form_id', 'option') ) ):?>
-								<div class="cell small-12 medium-6 large-3">
+								<div class="footer-form-wrap cell small-12 medium-6 large-3">
 									<?php if( !empty( get_field('newsletter_title', 'option') ) ):?>
 									<div><b><?php the_field('newsletter_title', 'option');?></b></div>	
 									<?php endif;?>

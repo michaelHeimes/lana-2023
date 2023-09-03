@@ -26,27 +26,27 @@ $fields = get_fields();
 						);
 					}?>
 				
-					<section class="entry-content" itemprop="text">
+					<section id="next" class="entry-content" itemprop="text">
 						
 						<?php if( !empty($fields['s1_section_title']) || !empty($fields['s1_left_column_copy']) || !empty($fields['s1_right_column']) || !empty($fields['s1_service_ctas']) || !empty($fields['s1_map_background_image']) || !empty($fields['s1_facts_figures']) || !empty($fields['s1_client_logos']) ):?>
 						<div class="section s1">
 							<div class="grid-container">
 								
 								<?php if( !empty($fields['s1_section_title']) || !empty($fields['s1_left_column_copy']) || !empty($fields['s1_right_column']) ):?>
-								<div class="grid-x grid-padding-x">
+								<div class="s1-first grid-x grid-padding-x">
 									<?php if( !empty($fields['s1_section_title']) ):?>
 									<div class="cell small-12 medium-3 tablet-2">
-										<div class="grid-x align-middle">
+										<div class="grid-x align-middle nowrap section-header">
 											<?php get_template_part('template-parts/svg', 'number-one', '');?>
 											<svg width="30" height="1" viewBox="0 0 30 1" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M29 0.5H1" stroke="#1B1B1B" stroke-linecap="square"/></svg>
-											<h2 class="h5">
+											<h2 class="h4 mb-0">
 												<?php echo esc_attr( $fields['s1_section_title'] );?>
 											</h2>
 										</div>
 									</div>
 									<?php endif;?>
 									<?php if( !empty($fields['s1_left_column_copy']) || !empty($fields['s1_right_column']) || !empty($fields['s1_service_ctas']) ):?>
-										<div class="cell small-12 medium-9 tablet-10">
+										<div class="columns-ctas-wrap cell small-12 medium-9 tablet-10">
 											<div class="grid-x grid-padding-x">
 												<div class="cell small-12 tablet-6">
 													<?php echo $fields['s1_left_column_copy'];?>
@@ -68,13 +68,14 @@ $fields = get_fields();
 															$link_url = $link['url'];
 															$link_target = $link['target'] ? $link['target'] : '_self';
 															?>
-																<a class="color-white" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
+																<a class="cta-link has-bg has-arrow-link d-block make-square color-white" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
 															<?php endif;?>
 																<?php if( !empty( $image ) ) {
 																	$imgID = $image['ID'];
 																	$img_alt = trim( strip_tags( get_post_meta( $imgID, '_wp_attachment_image_alt', true ) ) );
 																	$img = wp_get_attachment_image( $imgID, 'full', false, [ "class" => "object-fit cover", "alt"=>$img_alt] );
 																	echo $img;
+																	echo '<div class="mask bg"></div>';
 																}?>
 															<?php if( $link ):
 																$link_title = $link['title'];
@@ -100,26 +101,27 @@ $fields = get_fields();
 								<?php if( !empty($fields['s1_map_background_image']) || !empty($fields['s1_facts_figures']) ):?>
 								<div class="facts-figures-wrap grid-x grid-padding-x">
 									<div class="cell small-12">
-										<div class="inner has-bg">
+										<div class="inner has-bg inner has-bg grid-x align-middle align-center">
 											<?php if( !empty($fields['s1_map_background_image']) ):?>
 											<div class="bg" style="background-image: url(<?php echo esc_url($fields['s1_map_background_image']['url']); ?>);"></div>
 											<?php endif;?>
 											<?php if( !empty($fields['s1_facts_figures']) ):
 												$s1_facts_figures = $fields['s1_facts_figures'];
 											?>
-											<div class="ff-wrap white-bg br-12 relative">
+											<div class="cell small-12 tablet-10 xlarge-9 ff-wrap white-bg br-12 relative">
 												<div class="grid-x grid-padding-x">
 													<?php foreach($s1_facts_figures as $s1_facts_figure):
 														$figure = $s1_facts_figure['figure'];
 														$label = $s1_facts_figure['label'];
 													?>
-													<div class="cell small-12 medium-6 tablet-3 text-center">
+													<div class="single-ff cell small-12 medium-6 tablet-3 text-center relative">
 														<?php if( !empty($figure) ):?>
 															<div class="figure"><?php echo esc_attr( $figure );?></div>
 														<?php endif;?>
 														<?php if( !empty($label) ):?>
 															<div class="label h6"><?php echo esc_attr( $label );?></div>
 														<?php endif;?>
+														<div class="border yellow-bg"></div>
 													</div>
 													<?php endforeach;?>
 												</div>
@@ -131,11 +133,11 @@ $fields = get_fields();
 								<?php endif;?>
 								
 								<?php if( !empty( $fields['s1_clients_heading'] ) || !empty( $fields['s1_clients_arrow_link'] ) ):?>
-								<div class="white-bg grid-pattern granite br-12">
+								<div class="clients white-bg grid-pattern granite br-12">
 									<div class="section-top grid-x grid-padding-x align-middle">
 										<?php if( !empty( $fields['s1_clients_heading'] ) ):?>
 										<div class="cell small-12 medium-auto">
-											<h4><?php echo esc_html( $fields['s1_clients_heading'] );?></h4>
+											<h4 class="m-0"><?php echo $fields['s1_clients_heading'];?></h4>
 										</div>
 										<?php endif;?>
 										<?php if( !empty( $fields['s1_clients_arrow_link'] ) ):
@@ -151,7 +153,12 @@ $fields = get_fields();
 											</a>
 										</div>
 										<?php endif;?>
-										<hr>
+
+									</div>
+									<div class="grid-x grid-padding-x">
+										<div class="cell small-12">
+											<hr class="yellow m-0">
+										</div>
 									</div>
 									<?php 
 									$logos = $fields['s1_client_logos'];
@@ -163,7 +170,7 @@ $fields = get_fields();
 											if( !empty( $logo ) ) {
 												$img_alt = trim( strip_tags( get_post_meta( $imgID, '_wp_attachment_image_alt', true ) ) );
 												$img = wp_get_attachment_image( $imgID, 'full', false, [ "class" => "", "alt"=>$img_alt] );
-												echo '<div class="logo-wrap cell small-6 tablet-shrink text-center">';
+												echo '<div class="logo-wrap cell small-6 medium-4 tablet-4 xlarge-shrink text-center">';
 												echo $img;
 												echo '<div class="label">' . $label . '</div>';
 												echo '</div>';
@@ -180,16 +187,16 @@ $fields = get_fields();
 						<?php if( !empty( $fields['s2_section_title'] ) || !empty( $fields['s2_copy_heading'] ) || !empty( $fields['s2_copy'] ) || !empty( $fields['s2_image'] ) || !empty( $fields['s2_student_success_heading'] ) || !empty( $fields['s2_student_success_copy'] ) ):?>
 						<div class="section s2">
 							<?php if( !empty( $fields['s2_section_title'] ) || !empty( $fields['s2_copy_heading'] ) || !empty( $fields['s2_copy'] ) || !empty( $fields['s2_image'] ) ):?>
-							<div class="white-bg">
+							<div class="white-bg module-padding">
 								<div class="grid-container">
 									<div class="grid-x grid-padding-x">
 										<?php if( !empty($fields['s2_section_title']) ):?>
 										<div class="cell small-12 medium-3 tablet-2">
-											<div class="grid-x align-middle">
+											<div class="grid-x align-middle nowrap section-header">
 												<?php get_template_part('template-parts/svg', 'number-two', '');?>
 												<svg width="30" height="1" viewBox="0 0 30 1" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M29 0.5H1" stroke="#1B1B1B" stroke-linecap="square"/></svg>
-												<h2 class="h5">
-													<?php echo esc_attr( $fields['s2_section_title'] );?>
+												<h2 class="h4 mb-0">
+													<?php echo $fields['s2_section_title'];?>
 												</h2>
 											</div>
 										</div>
@@ -209,15 +216,27 @@ $fields = get_fields();
 													echo '</div>';
 												}?>
 												<?php if( !empty( $fields['s2_copy_heading'] ) || !empty( $fields['s2_copy'] ) ):?>
-													<div class="cell small-12 tablet-5 xlarge-4">
+													<div class="first-left cell small-12 tablet-5 xlarge-4">
 													<?php if( !empty( $fields['s2_copy_heading'] ) ) {
 														echo '<h2>' . esc_attr( $fields['s2_copy_heading'] ) . '</h2>';
 													};?>
 													<?php if( !empty( $fields['s2_copy'] ) ) {
 														echo '<div>' . $fields['s2_copy'] . '</div>';
 													};?>
+													<?php 
+													$link = $fields['s2_button_link'];
+													if( $link ): 
+														$link_url = $link['url'];
+														$link_title = $link['title'];
+														$link_target = $link['target'] ? $link['target'] : '_self';
+														?>
+													<div class="btn-wrap">
+														<a class="button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+													</div>
+													<?php endif; ?>
 													</div>
 												<?php endif; ?>
+
 											</div>
 										</div>
 										<?php endif; ?>
@@ -237,18 +256,18 @@ $fields = get_fields();
 
 						
 						<?php if( !empty($fields['s3_section_title']) || !empty( $fields['eyebrowheading_left_copy_right'] ) || !empty( get_field('image_and_l-a-n-a', 'option') ) || !empty(get_field('img-lana_leadership_text', 'option') ) ):?>
-						<div class="section s3">
+						<div class="section s3 white-bg module-padding">
 							<div class="grid-container">
 
 								<?php if( !empty($fields['s3_section_title']) || !empty( $fields['eyebrowheading_left_copy_right'] ) || !empty(get_field('img-lana_image', 'option') ) ):?>
 								<div class="grid-x grid-padding-x">
 									<?php if( !empty($fields['s3_section_title']) ):?>
 									<div class="cell small-12 medium-3 tablet-2">
-										<div class="grid-x align-middle">
-											<?php get_template_part('template-parts/svg', 'number-one', '');?>
+										<div class="grid-x align-middle nowrap section-header">
+											<?php get_template_part('template-parts/svg', 'number-three', '');?>
 											<svg width="30" height="1" viewBox="0 0 30 1" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M29 0.5H1" stroke="#1B1B1B" stroke-linecap="square"/></svg>
-											<h2 class="h5">
-												<?php echo esc_attr( $fields['s3_section_title'] );?>
+											<h2 class="h4 mb-0">
+												<?php echo $fields['s3_section_title'];?>
 											</h2>
 										</div>
 									</div>

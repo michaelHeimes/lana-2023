@@ -1,0 +1,21 @@
+.image-and-lana {
+	.grid-x.grid-padding-x.align-right {
+		@include breakpoint(large) {
+			margin-left: -1.78125rem;
+			margin-right: -1.78125rem;
+			.cell {
+				padding-left: 1.78125rem;
+				padding-right: 1.78125rem;
+			}
+		}
+	}
+	.img-wrap {
+		margin-bottom: 1.8rem;
+	}
+	.letter-card {
+		margin-bottom: 1.8rem;
+	}
+	.btn-wrap {
+		
+	}
+}

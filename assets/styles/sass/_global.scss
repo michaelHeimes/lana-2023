@@ -31,6 +31,18 @@ svg {
 	position: relative;
 }
 
+button,
+.button {
+	&.granite-outline {
+		background-color: transparent;
+		border: 2px solid $color-granite;
+		&:hover {
+			color: $black;
+			background-color: $color-granite;
+		}
+	}
+}
+
 /*********************
 POSTS & CONTENT STYLES
 *********************/
@@ -124,7 +136,7 @@ IMAGE GALLERY STYLES
 }
 .gallery::before, .gallery::after {
 	content: ' ';
-	display: table; 
+	display: table;
 }
 .gallery::after {
 	clear: both; 

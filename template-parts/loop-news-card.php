@@ -1,6 +1,6 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('cell news-card'); ?> role="article">		
 	<div class="inner br-12 h-100">		
-		<a class="grid-x flex-dir-column h-100" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
+		<a class="grid-x flex-dir-column h-100 color-black has-arrow-link" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
 			<?php if( has_post_thumbnail( $post->ID ) ) {
 				echo '<div class="thumb-wrap">';
 				$minWidth = 880;
@@ -42,16 +42,18 @@
 						<h2 class="h4"><b><?php the_title(); ?></b></h2>			
 					</header> <!-- end article header -->	
 					<section class="entry-content" itemprop="text">
-						<?php if( !empty( get_field('excerpt_text') ) ) {
+						<?php 
 							
-							echo esc_attr( get_field('excerpt_text', $post->ID) );
+						if ( has_excerpt( $post->ID ) ) {
+							
+							the_excerpt();
 							
 						} else {
 							
-							$excerpt = get_the_content();
+							$content = get_the_content();
 							
 							// Split the excerpt into words
-							$words = explode(' ', $excerpt);
+							$words = explode(' ', $content);
 							
 							// Check if the number of words is greater than 16
 							if (count($words) > 16) {
@@ -59,7 +61,7 @@
 								$shortened_excerpt = implode(' ', array_slice($words, 0, 16)) . ' ...';
 							} else {
 								// Use the original excerpt
-								$shortened_excerpt = $excerpt;
+								$shortened_excerpt = $content;
 							}
 							
 							echo wp_strip_all_tags($shortened_excerpt);
@@ -69,7 +71,7 @@
 				</div>
 				<footer class="article-footer">
 					<div class="arrow-link grid-x align-middle">
-						<span>Read More</span>
+						<span class="color-blue-violet">Read More</span>
 						<?php get_template_part('template-parts/svg', 'arrow-violet');?>
 					</div>
 				</footer> <!-- end article footer -->	

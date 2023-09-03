@@ -65,7 +65,7 @@
 //@prepros-prepend vendor/foundation/js/plugins/foundation.smoothScroll.js
 
 // Sticky Elements
-//@*prepros-prepend vendor/foundation/js/plugins/foundation.sticky.js
+//@prepros-prepend vendor/foundation/js/plugins/foundation.sticky.js
 
 // Tabs UI
 //@*prepros-prepend vendor/foundation/js/plugins/foundation.tabs.js
@@ -80,7 +80,7 @@
 //@prepros-prepend vendor/what-input.js
 
 // Swiper
-//@prepros-prepend vendor/swiper-bundle.js
+//@*prepros-prepend vendor/swiper-bundle.js
 
 // DOM Ready
 (function($) {
@@ -193,6 +193,18 @@
             }
         }
     }
+    
+    _app.make_square = function() {
+        const makeSquare = function() {
+            const elements = document.querySelectorAll('.make-square');
+            elements.forEach(function(element) {
+                const width = element.clientWidth;
+                element.style.minHeight = `${width}px`;
+            });
+        }
+        makeSquare();
+        window.addEventListener("resize", makeSquare);
+    }
             
     _app.init = function() {
         
@@ -201,6 +213,7 @@
         _app.emptyParentLinks();
         _app.fixed_nav_hack();
         _app.display_on_load();
+        _app.make_square();
         
         // Custom Functions
         //_app.mobile_takover_nav();

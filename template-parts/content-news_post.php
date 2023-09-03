@@ -27,12 +27,12 @@
 	
 	?>
 	<div class="grid-container">
-		<div class="grid-x grid-padding-x">
-			<header class="entry-header cell small-12 tablet-6 large-5">
+		<div class="grid-x grid-padding-x header-content-wrap">
+			<header class="entry-header cell small-12 tablet-8 tablet-offset-2 large-5 large-offset-0">
 				<hr class="yellow">
 				<?php the_title( '<h1 class="entry-title h2">', '</h1>' ); ?>
-				<div class="entry-meta white-bg">
-					<div class="grid-x grid-padding-x">
+				<div class="entry-meta white-bg br-12">
+					<div class="grid-x grid-padding-x align-middle">
 						<div class="cell auto">
 							<?php
 								$author_id = get_the_author_meta('ID');
@@ -60,7 +60,7 @@
 				</div><!-- .entry-meta -->
 			</header><!-- .entry-header -->
 
-			<div class="entry-content cell small-12 tablet-6 large5 large-offset-1">
+			<div class="entry-content cell small-12 tablet-8 tablet-offset-2 large-5 large-offset-1">
 				<?php
 				the_content(
 					sprintf(

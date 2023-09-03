@@ -20,7 +20,7 @@
 				$imgID = $image['ID'];
 				$img_alt = trim( strip_tags( get_post_meta( $imgID, '_wp_attachment_image_alt', true ) ) );
 				$img = wp_get_attachment_image( $imgID, 'full', false, [ "class" => "", "alt"=>$img_alt] );
-				echo '<div class="cell small-12 tablet-5 xlarge-4">';
+				echo '<div class="cell small-12 tablet-5">';
 				echo '<div class="img-wrap br-12">';
 				echo $img;
 				echo '</div>';
@@ -28,25 +28,25 @@
 			}?>
 			<div class="cell small-12 tablet-7 xlarge-6">
 				<div class="grid-x grid-padding-x">
-					<div class="cell small-12 tablet-6">
+					<div class="letter-card cell small-12 tablet-6">
 						<div class="h4">L</div>
 						<hr>
 						<h3 class="h6">Leadership</h3>
 						<p><?php echo esc_attr( $leadership_text );?></p>
 					</div>
-					<div class="cell small-12 tablet-6">
+					<div class="letter-card cell small-12 tablet-6">
 						<div class="h4">L</div>
 						<hr>
 						<h3 class="h6">Leadership</h3>
 						<p><?php echo esc_attr( $leadership_text );?></p>
 					</div>
-					<div class="cell small-12 tablet-6">
+					<div class="letter-card cell small-12 tablet-6">
 						<div class="h4">L</div>
 						<hr>
 						<h3 class="h6">Leadership</h3>
 						<p><?php echo esc_attr( $leadership_text );?></p>
 					</div>
-					<div class="cell small-12 tablet-6">
+					<div class="letter-card cell small-12 tablet-6">
 						<div class="h4">L</div>
 						<hr>
 						<h3 class="h6">Leadership</h3>
@@ -59,7 +59,9 @@
 						$link_title = $link['title'];
 						$link_target = $link['target'] ? $link['target'] : '_self';
 						?>
+					<div class="cell btn-wrap">
 						<a class="button blue-violet-gradient-bg" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+					</div>
 					<?php endif; ?>
 				</div>
 			</div>

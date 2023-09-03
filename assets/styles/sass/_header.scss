@@ -22,7 +22,7 @@ header.site-header {
 				
 				> a {
 					color: $black;
-					padding: 1.78rem 0.5rem 1.78rem;
+					padding: 1.7813rem 0.5rem;
 					
 					@include breakpoint(tablet) {
 
@@ -78,7 +78,7 @@ header.site-header {
 					right: 0;
 					width: 36px;
 					height: 4px;
-					background-color: $white;
+					background-color: $color-blue-violet;
 					transition: all .3s ease;
 					
 					&:nth-child(1) {

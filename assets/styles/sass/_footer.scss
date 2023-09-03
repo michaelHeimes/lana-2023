@@ -1,39 +1,44 @@
 footer#colophon {
-
-	.site-info {
-
-	}
-	
-	.left {
-		.bottom {
-			@include breakpoint(medium down) {
-				padding-bottom: 4.1rem;
-			}
-		}
-	}
+	padding-top: 4.8rem;
+	font-size: rem-calc(14);
+	line-height: 1.42857;
 		
-	ul#footer-links {
+	ul#footer-nav {
 		@include breakpoint(medium down) {
 			padding-bottom: 4.08rem;
 		}
 		li {
+			margin-bottom: 1.08rem;
 			a {
-				font-size: rem-calc(14);
-				line-height: rem-calc(19);
-				font-weight: bold;
-				text-transform: uppercase;
+				padding: .2rem 0;
 			}
 		}
 	}
 	
-	.copyright {
-		margin-bottom: 0;
-		@include breakpoint(medium down) {
-			text-align: center;
+	.single-location {
+		margin-bottom: 1.25rem;
+	}
+	
+	.footer-form-wrap {
+		.gform_wrapper.gravity-theme .gform_footer {
+			margin: 0;
+			padding: 0;
 		}
-		@include breakpoint(tablet) {
-			br {
-				display: none;
+		form {
+			display: flex;
+			border-radius: 35px;
+			border: 1px solid $color-granite;
+		}
+		input {
+			border: 0;
+			background-color: $black;
+			color: $color-granite;
+			height: auto;
+			padding: .42rem 1rem .562rem;
+			&::placeholder {
+				color: $color-granite;
+				font-size: rem-calc(12);
+				line-height: 1.83333%;
 			}
 		}
 	}

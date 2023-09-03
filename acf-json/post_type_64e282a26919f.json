@@ -72,7 +72,8 @@
     "has_archive": false,
     "has_archive_slug": "",
     "rewrite": {
-        "permalink_rewrite": "post_type_key",
+        "permalink_rewrite": "custom_permalink",
+        "slug": "news",
         "with_front": "1",
         "feeds": "0",
         "pages": "1"
@@ -82,5 +83,5 @@
     "can_export": true,
     "delete_with_user": false,
     "register_meta_box_cb": "",
-    "modified": 1693603385
+    "modified": 1693678283
 }

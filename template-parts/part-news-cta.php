@@ -5,7 +5,7 @@
 	$text = $news_cta['text'];
 	$post_feed = $news_cta['post_feed'];
 ?>
-<div class="news-cta">
+<div class="news-cta module-padding">
 	<div class="grid-container">
 		<div class="grid-x grid-padding-x align-center">
 			<?php if( !empty($eyebrow) || !empty($heading) || !empty($text) ):?>
@@ -70,7 +70,7 @@
 			</div>
 		<?php endif; wp_reset_postdata();?>
 		
-		<div class="grid-x grid-padding-x align-center">
+		<div class="grid-x grid-padding-x align-center btn-wrap">
 			<a class="button blue-violet-gradient-bg" href="/news">
 				Read All
 			</a>
