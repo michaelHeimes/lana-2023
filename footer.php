@@ -20,7 +20,7 @@
 										$imgID = get_field('footer_logo', 'option')['ID'];
 										$img_alt = trim( strip_tags( get_post_meta( $imgID, '_wp_attachment_image_alt', true ) ) );
 										$img = wp_get_attachment_image( $imgID, 'full', false, [ "class" => "", "alt"=>$img_alt] );
-										echo '<div class="img-wrap">';
+										echo '<div class="logo-wrap">';
 										echo $img;
 										echo '</div>';
 									}?>
@@ -50,10 +50,14 @@
 								<?php if( !empty( get_field('newsletter_title', 'option') ) || !empty( get_field('newsletter_text', 'option') ) || !empty( get_field('newsletter_form_id', 'option') ) ):?>
 								<div class="footer-form-wrap cell small-12 medium-6 large-3">
 									<?php if( !empty( get_field('newsletter_title', 'option') ) ):?>
-									<div><b><?php the_field('newsletter_title', 'option');?></b></div>	
-									<?php endif;?>
-									<?php if( !empty( get_field('newsletter_text', 'option') ) ):?>
-									<div><?php the_field('newsletter_text', 'option');?></div>	
+									<div class="form-text">
+										<?php if( !empty( get_field('newsletter_title', 'option') ) || !empty( get_field('newsletter_text', 'option') ) ):?>
+										<div><b><?php the_field('newsletter_title', 'option');?></b></div>	
+										<?php endif;?>
+										<?php if( !empty( get_field('newsletter_text', 'option') ) ):?>
+										<div><?php the_field('newsletter_text', 'option');?></div>	
+										<?php endif;?>
+									</div>
 									<?php endif;?>
 									<?php if( !empty( get_field('newsletter_form_id', 'option') ) ) {
 										$form_id = get_field('newsletter_form_id', 'option');
@@ -63,17 +67,17 @@
 								<?php endif;?>
 							</div>
 							<?php if( !empty( get_field('copyright_text', 'option') ) || wp_get_nav_menu_items('social-links') ):?>
-								<hr>
-								<div class="grid-x grid-padding-x flex-dir-column-reverse medium-flex-dir-row-reverse">
+								<hr class="granite">
+								<div class="grid-x grid-padding-x">
+									<?php if( !empty( get_field('copyright_text', 'option') ) ){
+										$copyright_text = get_field('copyright_text', 'option');
+										echo '<div class="cell auto">&copy;' . esc_attr(date('Y')) . ' ' . $copyright_text . '</div>';
+									};?>
 									<?php if( wp_get_nav_menu_items('social-links') ) {
-										echo '<div class="cell small-12 tablet-shrink">';
+										echo '<div class="cell shrink">';
 										lana_social_links();
 										echo '</div>';
 									}?>
-									<?php if( !empty( get_field('copyright_text', 'option') ) ){
-										$copyright_text = get_field('copyright_text', 'option');
-										echo '<div class="cell small-12 tablet-auto">&copy;' . esc_attr(date('Y')) . ' ' . $copyright_text . '</div>';
-									};?>
 								</div>
 							<?php endif;?>
 						</div>

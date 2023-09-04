@@ -18,8 +18,9 @@
 	$small_heading = $images_copy['small_heading'];
 	$copy = $images_copy['copy'];
 	$button_link = $images_copy['button_link'];
+	$remove_grid_overlay = $images_copy['remove_grid_overlay'];
 ?>
-<div class="images-copy<?php if( $bg_color == 'white' ){ echo ' white-bg'; };?>">
+<div class="images-copy module-padding<?php if( $bg_color == 'white' ){ echo ' white-bg'; }; echo ' img-size-' . $image_size;?>">
 	<div class="grid-container">
 		<div class="grid-x grid-padding-x">
 				<div class="copy-image grid-x grid-padding-x<?php if( $image_orientation == 'right' ){ echo ' tablet-flex-dir-row-reverse align-right';}?>">
@@ -27,10 +28,12 @@
 						$imgID = $small_image['ID'];
 						$img_alt = trim( strip_tags( get_post_meta( $imgID, '_wp_attachment_image_alt', true ) ) );
 						$img = wp_get_attachment_image( $imgID, 'full', false, [ "class" => "", "alt"=>$img_alt] );
-						echo '<div class="cell small-12 tablet-6 large-4 xlarge-offset-1">';
+						echo '<div class="top-img-wrap cell small-12 tablet-6 large-4 xlarge-offset-1">';
 						echo '<div class="img-wrap br-12 relative">';
 						echo $img;
-						echo '<div class="mask grid-pattern white over-image"></div>';
+						if( $remove_grid_overlay != 'true' ) {
+							echo '<div class="mask grid-pattern white over-image"></div>';
+						}
 						echo '</div>';
 						echo '</div>';
 					}?>
@@ -38,15 +41,17 @@
 						$imgID = $large_image['ID'];
 						$img_alt = trim( strip_tags( get_post_meta( $imgID, '_wp_attachment_image_alt', true ) ) );
 						$img = wp_get_attachment_image( $imgID, 'full', false, [ "class" => "", "alt"=>$img_alt] );
-						echo '<div class="cell small-12 tablet-5 tablet-offset-1">';
+						echo '<div class="top-img-wrap cell small-12 tablet-5 tablet-offset-1">';
 						echo '<div class="img-wrap br-12 relative">';
 						echo $img;
-						echo '<div class="mask grid-pattern white over-image"></div>';
+						if( $remove_grid_overlay != 'true' ) {
+							echo '<div class="mask grid-pattern white over-image"></div>';
+						}
 						echo '</div>';
 						echo '</div>';
 					}?>
 					<?php if( $image_type == 'three-set' && !empty( $three_image_set ) ):?>
-						<div class="three-set cell small-12 tablet-6 large-5 large-offset-1">
+						<div class="top-img-wrap three-set cell small-12 tablet-6 large-5 large-offset-1">
 							<div class="grid-x grid-padding-x">
 							<?php
 								$imgID = $top_left_image['ID'];
@@ -108,7 +113,9 @@
 								$link_title = $link['title'];
 								$link_target = $link['target'] ? $link['target'] : '_self';
 								?>
+							<div class="btn-wrap">
 								<a class="button blue-violet-gradient-bg" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+							</div>
 							<?php endif; ?>
 						</div>
 					<?php endif; ?>

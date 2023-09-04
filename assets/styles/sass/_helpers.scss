@@ -38,8 +38,18 @@ button,
 	
 }
 .module-padding {
-	padding-top: 7.5rem;
-	padding-bottom: 7.5rem;
+	padding-top: 3.25rem;
+	padding-bottom: 3.25rem;
+	@include breakpoint(medium) {
+		padding-top: 7.5rem;
+		padding-bottom: 7.5rem;
+	}
+	&.ntp {
+		padding-top: 0 !important;
+	}
+	&.nbp {
+		padding-bottom: 0 !important;
+	}
 }
 .h-100 {
 	height: 100%;	
@@ -59,9 +69,9 @@ button,
 }
 .black-bg {
 	background-color: $black;
-	color: $white;
+	color: $color-granite;
 	a {
-		color: $white;
+		color: $color-granite;
 	}
 }
 .white-bg {
@@ -102,6 +112,9 @@ hr {
 		border-color: $color-yellow-ochre;
 		border-width: 2px;
 	}
+	&.granite {
+		border-color: $color-granite
+	}
 }
 .nowrap {
 	flex-wrap: nowrap;
@@ -111,4 +124,7 @@ hr {
 }
 .mb-0 {
 	margin-bottom: 0 !important;
+}
+.overflow-hidden {
+	overflow: hidden;
 }

@@ -1,0 +1,20 @@
+.team-members {
+	.header {
+		padding-bottom: 5.3rem;
+	}
+	.team-member-grid {
+		> .cell {
+			margin-bottom: 1.25rem;
+			.white-bg {
+				padding: 1.25rem;
+			}
+			.img-wrap {
+				border-radius: 100%;
+				max-width: 105px;
+			}
+			.flag-wrap {
+				margin-right: .625rem;
+			}
+		}
+	}
+}

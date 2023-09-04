@@ -36,6 +36,9 @@ p,
 	line-height: 1.375;
 	margin-bottom: 1.325rem;
 }
+.uppercase {
+	text-transform: uppercase;
+}
 .entry-content {
 	p {
 		a {
@@ -89,7 +92,7 @@ button,
 	}
 	&:hover {
 		svg {
-			transform: translateX(12px);	
+			transform: translateX(8px);	
 		}
 	}
 }

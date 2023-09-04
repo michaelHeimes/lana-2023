@@ -187,7 +187,7 @@
                     "label": "Heading",
                     "name": "heading",
                     "aria-label": "",
-                    "type": "text",
+                    "type": "textarea",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -198,9 +198,9 @@
                     },
                     "default_value": "",
                     "maxlength": "",
+                    "rows": 2,
                     "placeholder": "",
-                    "prepend": "",
-                    "append": ""
+                    "new_lines": "br"
                 },
                 {
                     "key": "field_64e28a6e3c2e2",
@@ -787,7 +787,7 @@
                         ]
                     ],
                     "wrapper": {
-                        "width": "",
+                        "width": "33",
                         "class": "",
                         "id": ""
                     },
@@ -799,6 +799,34 @@
                     "return_format": "value",
                     "allow_null": 0,
                     "layout": "horizontal"
+                },
+                {
+                    "key": "field_64f51a5c67079",
+                    "label": "Remove Grid Overlay",
+                    "name": "remove_grid_overlay",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_64ebbffd47d5c",
+                                "operator": "==",
+                                "value": "large"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
                 },
                 {
                     "key": "field_64ebc282ecea0",
@@ -1304,6 +1332,46 @@
                             "parent_repeater": "field_64ecde8de19ad"
                         }
                     ]
+                },
+                {
+                    "key": "field_64f529f780647",
+                    "label": "Remove Top Padding",
+                    "name": "remove_top_padding",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
+                    "key": "field_64f52a0480648",
+                    "label": "Remove Bottom Padding",
+                    "name": "remove_bottom_padding",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
                 }
             ]
         }
@@ -1328,5 +1396,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1693246513
+    "modified": 1693789018
 }

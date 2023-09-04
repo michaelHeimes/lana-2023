@@ -5,6 +5,11 @@
 			color: $black;
 		}
 	}
+	.thumb-wrap {
+		img {
+			width: 100%;
+		}
+	}
 	.text-wrap {
 		flex: 1;
 		padding: 1.6rem 1.38rem 2rem;
@@ -14,5 +19,8 @@
 				padding-bottom: 0.15rem;
 			}
 		}	
+	}
+	footer.article-footer {
+		padding-top: 1.08rem;
 	}
 }

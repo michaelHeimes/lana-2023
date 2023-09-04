@@ -1,0 +1,17 @@
+.three-column-icon-text {
+	padding-top: 5.625rem;
+	.cell {
+		margin-bottom: 2rem;
+	}
+	.icon-wrap {
+		margin-bottom: 1.15rem;
+		@include breakpoint(large) {
+			margin-bottom: 2.15rem;
+		}
+	}
+	p {
+		max-width: 270px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}

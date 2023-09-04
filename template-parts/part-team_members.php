@@ -4,7 +4,7 @@
 	$heading = $team_members['heading'];
 	$team_members = $team_members['team_members'];
 ?>
-<div class="team-members">
+<div class="team-members module-padding">
 	<div class="grid-container">
 		<?php if( !empty($eyebrow) || !empty($heading) ):?>
 		<div class="header grid-x grid-padding-x align-center">
@@ -32,7 +32,7 @@
 							$img_alt = trim( strip_tags( get_post_meta( $imgID, '_wp_attachment_image_alt', true ) ) );
 							$img = wp_get_attachment_image( $imgID, 'team-card-img', false, [ "class" => "", "alt"=>$img_alt] );
 							echo '<div class="cell small-4">';
-							echo '<div class="img-wrap">';
+							echo '<div class="img-wrap overflow-hidden">';
 							echo $img;
 							echo '</div>';
 							echo '</div>';
@@ -43,7 +43,7 @@
 								echo '<h5 class="h6">' . $title . '</h5>';
 							};?>
 							<?php if( !empty($country_flag) || !empty($country_flag) ):?>
-							<div class="grid-x">
+							<div class="grid-x align-middle">
 								<?php if( !empty( $country_flag ) ) {
 									$imgID = $country_flag['ID'];
 									$img_alt = trim( strip_tags( get_post_meta( $imgID, '_wp_attachment_image_alt', true ) ) );

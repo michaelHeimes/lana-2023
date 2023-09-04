@@ -13,20 +13,24 @@
 		$button_link = $image_and_lana['button_link'];
 	}
 ?>
-<div class="image-and-lana">
+<div class="image-and-lana module-padding">
 	<div class="grid-container">
 		<div class="grid-x grid-padding-x <?php echo $alignment;?>">
 			<?php if( !empty( $image ) ) {
 				$imgID = $image['ID'];
 				$img_alt = trim( strip_tags( get_post_meta( $imgID, '_wp_attachment_image_alt', true ) ) );
 				$img = wp_get_attachment_image( $imgID, 'full', false, [ "class" => "", "alt"=>$img_alt] );
-				echo '<div class="cell small-12 tablet-5">';
+				if( is_page_template('page-templates/page-home.php') ) {
+					echo '<div class="cell small-12 tablet-5">';
+				} else {
+					echo '<div class="cell small-12 tablet-5 tablet-offset-1">';
+				}
 				echo '<div class="img-wrap br-12">';
 				echo $img;
 				echo '</div>';
 				echo '</div>';
 			}?>
-			<div class="cell small-12 tablet-7 xlarge-6">
+			<div class="right cell small-12 <?php if( is_page_template('page-templates/page-home.php') ) { echo ' tablet-7';} else { echo ' tablet-6';};?>  xlarge-6">
 				<div class="grid-x grid-padding-x">
 					<div class="letter-card cell small-12 tablet-6">
 						<div class="h4">L</div>

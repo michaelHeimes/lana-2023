@@ -1,5 +1,11 @@
-.image-and-lana {
-	.grid-x.grid-padding-x.align-right {
+.lana-module {
+	.eyebrowheading-left-copy-right {
+		padding-bottom: 4.8rem;
+	}
+	.image-and-lana.module-padding {
+		padding-top: 0;
+	}
+	.grid-x.grid-padding-x {
 		@include breakpoint(large) {
 			margin-left: -1.78125rem;
 			margin-right: -1.78125rem;
@@ -10,10 +16,19 @@
 		}
 	}
 	.img-wrap {
-		margin-bottom: 1.8rem;
+		margin-bottom: 2.8rem;
+		@include breakpoint(medium) {
+			margin-bottom: 1.8rem;
+		}
+	}
+	.right {
+		padding-top: 4rem;
 	}
 	.letter-card {
 		margin-bottom: 1.8rem;
+		h4 {
+			font-weight: 500;
+		}
 	}
 	.btn-wrap {
 		

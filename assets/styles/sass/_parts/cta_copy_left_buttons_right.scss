@@ -1,0 +1,36 @@
+.cta_copy_left_buttons_right {
+	.white-bg {
+		padding-top: 3.4rem;
+		padding-bottom: 2.05rem;
+	}
+	.copy-wrap {
+		@include breakpoint(small down) {
+			margin-bottom: 2rem;
+		}
+		a {
+			text-decoration: none;
+			font-weight: 700;
+			&:after {
+				display: none;
+			}
+		}
+	}
+	.buttons-wrap {
+		align-items: flex-start;
+		@include breakpoint(tablet) {
+			align-items: flex-end;
+		}
+	}
+	.buttons {
+		a {
+			&:not(:last-child) {
+				margin-bottom: 1.25rem;
+			}
+			&:nth-child(even) {
+				background: transparent;
+				color: $color-blue-violet;
+				border: 2px solid $color-blue-violet;
+			}
+		}
+	}
+}

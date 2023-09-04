@@ -1,4 +1,9 @@
 .images-copy {
+	.top-img-wrap {
+		@include breakpoint(medium down) {
+			margin-bottom: 2rem;
+		}
+	}
 	.three-set {
 		.tl-img {
 			width: 40%;	
@@ -9,4 +14,24 @@
 			margin-bottom: 1.25rem;
 		}
 	}
+	.icon-wrap {
+		margin-bottom: 1.55rem;
+	}
+	h6 {
+		margin-bottom: 1.2rem;
+	}
+	h5 {
+		margin-bottom: 0;
+	}
+	h2 {
+		margin-bottom: 1.25rem;
+	}
+	ul {
+		margin-left: 2.75rem;
+	}
+&.img-size-small {
+	h6 {
+		margin-bottom: .52rem;
+	}
+}
 }

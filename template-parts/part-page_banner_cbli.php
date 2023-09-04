@@ -24,11 +24,11 @@
 	}
 ?>
 
-<header class="entry-header page-banner-cbli">
+<header class="part-page_banner_cbli entry-header page-banner-cbli">
 	<div class="grid-container">
 		<div class="grid-x grid-padding-x align-center">
 			<?php if( !empty($eyebrow) || !empty($header) || !empty($small_heading) || !empty($copy) || !empty($button_link) ):?>
-				<div class="cell small-12 medium-6 large-5">
+				<div class="text-wrap cell small-12 medium-6 large-5 xlarge-4">
 					<?php if( !empty($eyebrow) ) {
 						echo '<h2 class="h6">' . $eyebrow . '</h2>' ;
 					};?>
@@ -36,7 +36,7 @@
 						echo '<h1 class="h2">' . $heading . '</h1>' ;
 					};?>	
 					<?php if( !empty($small_heading) ) {
-						echo '<hr>';
+						echo '<hr class="yellow">';
 						echo '<h3 class="h5">' . $small_heading . '</h3>' ;
 					};?>	
 					<?php if( !empty($copy) ) {
@@ -57,7 +57,7 @@
 				$imgID = $image['ID'];
 				$img_alt = trim( strip_tags( get_post_meta( $imgID, '_wp_attachment_image_alt', true ) ) );
 				$img = wp_get_attachment_image( $imgID, 'full', false, [ "class" => "", "alt"=>$img_alt] );
-				echo '<div class="cell small-12 medium-6 large-5">';
+				echo '<div class="cell small-12 medium-6 large-5 xlarge-offset-1">';
 				echo '<div class="img-wrap br-12 relative">';
 				echo $img;
 				echo '<div class="mask grid-pattern white over-image"></div>';

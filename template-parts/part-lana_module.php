@@ -15,16 +15,16 @@
 		</div>
 	</div>
 		
-		<?php if( !empty( get_field('image_and_l-a-n-a', 'option') ) ):
-			$image_and_lana = get_field('image_and_l-a-n-a', 'option');
+	<?php if( !empty( get_field('image_and_l-a-n-a', 'option') ) ){
+		$image_and_lana = get_field('image_and_l-a-n-a', 'option');
 
-			get_template_part('template-parts/part', 'image_and_lana',
-				array(
-					'image_and_lana' => $image_and_lana,
-					'alignment' => 'align-center',
-				)
-			);
+		get_template_part('template-parts/part', 'image_and_lana',
+			array(
+				'image_and_lana' => $image_and_lana,
+				'alignment' => 'align-center',
+			)
+		);
 
-		endif;?>
+	};?>
 		
 </div>
