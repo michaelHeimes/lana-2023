@@ -1,0 +1,51 @@
+.page-template-page-contact {
+	.module-padding.first {
+		padding-top: 5.6rem;
+	}
+	.left {
+		margin-bottom: 0.8rem;
+		.copy-wrap {
+			padding-bottom: 0.55rem;
+		}
+		.contact-row {
+			margin-bottom: 1.7rem;
+		}
+	}
+	.contact-form-wrap {
+		padding: 2.15rem 2.5rem 2rem;
+		.form-heading {
+			margin-bottom: 0.9rem;
+		}
+	}
+	.gform_wrapper.gravity-theme {
+		input:not([type="submit"]) {
+			padding: 0.4rem 1.2rem 0.57rem !important;
+		}
+		textarea {
+			padding: 1.8rem 1.2rem !important;
+		}
+		.gform_fields {
+			grid-row-gap: 20px;
+			fieldset.gfield--type-email {
+				.ginput_complex {
+					flex-direction: column;
+				}
+				.ginput_left,
+				.ginput_right {
+					padding-left: 0 !important;
+					padding-right: 0 !important;
+				}
+				.ginput_left {
+					margin-bottom: 20px;
+				}
+				.ginput_right {
+					
+				}
+			}
+		}
+		.gform_footer {
+			margin-top: 4px;
+			padding-bottom: 0;
+		}
+	}
+}

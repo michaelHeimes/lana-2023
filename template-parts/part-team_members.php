@@ -15,7 +15,7 @@
 		</div>
 		<?php endif;?>
 		<?php if( !empty($team_members) ):?>
-		<div class="team-member-grid grid-x grid-padding-x small-up-1 medium-up-2 tablet-up-3">
+		<div class="team-member-grid grid-x grid-padding-x small-up-1 medium-up-2 large-up-3">
 			<?php foreach($team_members as $post):
 				setup_postdata($post);
 				$card_image = get_field('card_image'); 
@@ -25,25 +25,25 @@
 				$location = get_field('location'); 
 			?>
 			<div class="cell">
-				<div class="white-bg br-12">
+				<div class="white-bg br-12 h-100">
 					<div class="grid-x grid-padding-x align-middle">
 						<?php if( !empty( $card_image ) ) {
 							$imgID = $card_image['ID'];
 							$img_alt = trim( strip_tags( get_post_meta( $imgID, '_wp_attachment_image_alt', true ) ) );
 							$img = wp_get_attachment_image( $imgID, 'team-card-img', false, [ "class" => "", "alt"=>$img_alt] );
-							echo '<div class="cell small-4">';
+							echo '<div class="cell shrink">';
 							echo '<div class="img-wrap overflow-hidden">';
 							echo $img;
 							echo '</div>';
 							echo '</div>';
 						}?>
-						<div class="cell small-8">
+						<div class="cell auto">
 							<h4><?php echo esc_attr( $name );?></h4>
 							<?php if( !empty($title) ) {
 								echo '<h5 class="h6">' . $title . '</h5>';
 							};?>
 							<?php if( !empty($country_flag) || !empty($country_flag) ):?>
-							<div class="grid-x align-middle">
+							<div class="grid-x align-middle nowrap">
 								<?php if( !empty( $country_flag ) ) {
 									$imgID = $country_flag['ID'];
 									$img_alt = trim( strip_tags( get_post_meta( $imgID, '_wp_attachment_image_alt', true ) ) );

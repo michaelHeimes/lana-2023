@@ -85,7 +85,8 @@ button,
 }
 .alm-btn-wrap .alm-load-more-btn,
 .gform_button,
-.blue-violet-gradient-bg {
+.blue-violet-gradient-bg,
+.button:not(.granite-outline) {
 	background-image: linear-gradient(39.61deg,#160058 0%,#5021D9 100%);
 	background-image: linear-gradient(39.61deg, #160058, #1c006a, #21017d, #270190, #2c02a4, #3105af, #3609ba, #3b0dc5, #4013ca, #4618cf, #4b1dd4, #5021d9);
 }
@@ -99,7 +100,7 @@ button,
 		background-image: linear-gradient($color-granite 1px, transparent 1px), linear-gradient(90deg, $color-granite 1px, transparent 1px);
 	}
 	&.over-image {
-		opacity: .1;
+		opacity: .07;
 	}
 }
 .br-12 {

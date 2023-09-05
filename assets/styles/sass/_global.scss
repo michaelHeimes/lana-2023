@@ -33,13 +33,27 @@ svg {
 
 button,
 .button {
-	&.granite-outline {
+	&.granite-outline,
+	&.alm-load-more-btn.loading, {
 		background-color: transparent;
 		border: 2px solid $color-granite;
 		&:hover {
 			color: $black;
 			background-color: $color-granite;
 		}
+	}
+}
+
+body .alm-btn-wrap .alm-load-more-btn.loading {
+	background-color: transparent;
+	border: 2px solid $color-blue-violet;
+	color: $color-blue-violet;
+	&:before {
+		height: 24px;
+		width: 24px;
+		top: 0;
+		left: 6px;
+		background-color: transparent;
 	}
 }
 

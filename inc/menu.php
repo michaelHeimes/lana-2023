@@ -44,7 +44,9 @@ function lana_off_canvas_nav() {
 		'theme_location'	=> 'offcanvas-nav',					// Where it's located in the theme
 		'depth'				=> 5,								// Limit the depth of the nav
 		'fallback_cb'		=> false,							// Fallback function (see below)
-		'walker'			=> new Off_Canvas_Menu_Walker()
+		'walker'			=> new Off_Canvas_Menu_Walker(),
+		'link_before'    => '<span>',
+		'link_after'     => '</span>'	
 	));
 }
 

@@ -1,8 +1,22 @@
 .page-template-page-news {
-	.alm-btn-wrap .alm-load-more-btn {
-		@include button;
-		
-		height: auto;
-		box-shadow: 0 0 0;
+	.news-banner {
+		padding-top: 7.5rem;
+		padding-bottom: .4rem;
+	}
+	.news-filter.alm-filter-nav {
+		padding-bottom: 1.25rem;
+		hr.top {
+			margin-top: 0;
+		}
+	}
+	.alm-btn-wrap {
+		padding-top: 2.55rem;
+		padding-bottom: 0;
+		margin-bottom: 0;
+		.alm-load-more-btn {
+			@include button;
+			height: auto;
+			box-shadow: 0 0 0;
+		}
 	}
 }

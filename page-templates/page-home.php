@@ -265,7 +265,7 @@ $fields = get_fields();
 
 						
 						<?php if( !empty($fields['s3_section_title']) || !empty( $fields['eyebrowheading_left_copy_right'] ) || !empty( get_field('image_and_l-a-n-a', 'option') ) || !empty(get_field('img-lana_leadership_text', 'option') ) ):?>
-						<div class="section s3 white-bg module-padding">
+						<div class="section s3 white-bg module-padding lana-module">
 							<div class="grid-container">
 
 								<?php if( !empty($fields['s3_section_title']) || !empty( $fields['eyebrowheading_left_copy_right'] ) || !empty(get_field('img-lana_image', 'option') ) ):?>

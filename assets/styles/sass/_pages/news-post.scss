@@ -1,0 +1,23 @@
+.single-news_post {
+	h1 {
+		margin-bottom: 2.15rem;
+	}
+	.entry-meta {
+		padding: 0.54rem 1.22rem;
+		.avatar-wrap {
+			max-width: 50px;
+			border-radius: 100%;
+			overflow: hidden;
+			margin-right: .54rem;
+		}
+		.label {
+			font-size: rem-calc(11);
+			font-weight: 600;
+			line-height: 1;
+		}
+		.date-wrap {
+			border-left: 1px solid $black;
+			padding: 0 1.25rem 0 2.5rem;	
+		}
+	}
+}

@@ -23,17 +23,14 @@
 				<div class="top">
 					<header class="article-header">
 						<?php
-						// Get the terms for the 'news_type' taxonomy assigned to the current post
 						$terms = get_the_terms(get_the_ID(), 'news_type');
 						
-						// Check if terms exist
 						if ($terms && !is_wp_error($terms)) {
 							$term_names = array();
 							foreach ($terms as $term) {
 								$term_names[] = $term->name;
 							}
 							
-							// Output the term names separated by "//"
 							echo '<h6>';
 							echo implode(' // ', $term_names);
 							echo '</h6>';

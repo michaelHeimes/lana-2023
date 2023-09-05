@@ -30,30 +30,46 @@
 		<div class="grid-x grid-padding-x header-content-wrap">
 			<header class="entry-header cell small-12 tablet-8 tablet-offset-2 large-5 large-offset-0">
 				<hr class="yellow">
+				<?php
+				$terms = get_the_terms(get_the_ID(), 'news_type');
+				
+				if ($terms && !is_wp_error($terms)) {
+					$term_names = array();
+					foreach ($terms as $term) {
+						$term_names[] = $term->name;
+					}
+					
+					echo '<h6>';
+					echo implode(' // ', $term_names);
+					echo '</h6>';
+				}
+				?>
 				<?php the_title( '<h1 class="entry-title h2">', '</h1>' ); ?>
 				<div class="entry-meta white-bg br-12">
-					<div class="grid-x grid-padding-x align-middle">
+					<div class="grid-x grid-padding-x">
 						<div class="cell auto">
 							<?php
 								$author_id = get_the_author_meta('ID');
 								$author_name = get_the_author();
-								$author_avatar = get_avatar($author_id, 37);
+								$author_avatar = get_avatar($author_id, 100);
 								$post_date = get_the_date('j M Y');
 							?>
 							<div class="grid-x align-middle">
 								<div class="cell shrink">
-									<?php echo $author_avatar;?>
+									<div class="avatar-wrap">
+										<?php echo $author_avatar;?>
+									</div>
 								</div>
 								<div class="cell auto">
-									<div class="label">
+									<div class="label uppercase">
 										Written By
 									</div>
 									<?php echo $author_name;?>
 								</div>
 							</div>
 						</div>
-						<div class="cell shrink">
-							<?php echo $post_date;?>
+						<div class="cell shrink arrow-link">
+							<div class="date-wrap grid-x align-middle h-100"><?php echo $post_date;?></div>
 						</div>
 					</div>
 

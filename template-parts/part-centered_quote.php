@@ -16,7 +16,7 @@ $quote_author = $centered_quote['quote_author'];
 									echo '<p class="quote-text">' . $quote_text . '</p>';
 								};?>
 								<?php if( !empty( $quote_author ) ) {
-									echo '<p class="quote-author uppercase mb-0">' . $quote_author . '</p>';
+									echo '<p class="quote-author arrow-link mb-0">' . $quote_author . '</p>';
 								};?>
 							</div>
 						</div>
