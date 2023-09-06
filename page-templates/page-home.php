@@ -48,11 +48,11 @@ $fields = get_fields();
 									<?php if( !empty($fields['s1_left_column_copy']) || !empty($fields['s1_right_column']) || !empty($fields['s1_service_ctas']) ):?>
 										<div class="columns-ctas-wrap cell small-12 medium-8 tablet-9 xlarge-10">
 											<div class="grid-x grid-padding-x">
-												<div class="cell small-12 tablet-6">
+												<div class="cell small-12 tablet-6 large-5">
 													<?php echo $fields['s1_left_column_copy'];?>
 												</div>
 												<?php if( !empty($fields['s1_right_column_copy']) ):?>
-													<div class="cell small-12 tablet-6">
+													<div class="cell small-12 tablet-6 large-5">
 														<?php echo $fields['s1_right_column_copy'];?>
 													</div>
 												<?php endif;?>

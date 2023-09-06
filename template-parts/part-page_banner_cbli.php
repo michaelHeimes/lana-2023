@@ -26,7 +26,7 @@
 
 <header class="part-page_banner_cbli entry-header page-banner-cbli">
 	<div class="grid-container">
-		<div class="grid-x grid-padding-x align-center">
+		<div class="grid-x grid-padding-x align-center align-middle">
 			<?php if( !empty($eyebrow) || !empty($header) || !empty($small_heading) || !empty($copy) || !empty($button_link) ):?>
 				<div class="text-wrap cell small-12 medium-6 large-5 xlarge-4">
 					<?php if( !empty($eyebrow) ) {

@@ -14,7 +14,7 @@
 	}
 ?>											
 <div class="eyebrowheading-left-copy-right module-padding grid-x grid-padding-x">
-	<div class="cell small-12 tablet-6">
+	<div class="cell small-12 tablet-7">
 		<?php if( !empty($eyebrow) ) {
 			echo '<h2 class="h6">' . esc_attr( $eyebrow ) . '</h2>';
 		};?>
@@ -23,7 +23,7 @@
 		};?>
 	</div>
 	<?php if( !empty( $copy ) || !empty( $arrow_link ) ):?>
-		<div class="cell small-12 tablet-6 xlarge-5 xlarge-offset-1">
+		<div class="cell small-12 tablet-6 xlarge-5">
 			<?php if( !empty($copy) ) {
 				echo '<div class="text-wrap">' . $copy . '</div>';
 			};?>
