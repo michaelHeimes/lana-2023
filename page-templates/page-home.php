@@ -220,7 +220,9 @@ $fields = get_fields();
 													echo '<div class="cell small-12 tablet-6 tablet-offset-1">';
 													echo '<div class="img-wrap br-12 relative">';
 													echo $img;
-													echo '<div class="mask grid-pattern white over-image"></div>';
+													if( $fields['s2_add_grid_overlay'] == true ) {
+														echo '<div class="mask grid-pattern white over-image"></div>';
+													}
 													echo '</div>';
 													echo '</div>';
 												}?>

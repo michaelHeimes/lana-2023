@@ -28,7 +28,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "50",
                         "class": "",
                         "id": ""
                     },
@@ -42,6 +42,26 @@
                     "max_size": "",
                     "mime_types": "",
                     "preview_size": "thumbnail"
+                },
+                {
+                    "key": "field_659ea174a88e5",
+                    "label": "Add Grid Overlay",
+                    "name": "add_grid_overlay",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
                 },
                 {
                     "key": "field_64e20cd3ebc7b",
@@ -252,7 +272,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "50",
+                        "width": "33",
                         "class": "",
                         "id": ""
                     },
@@ -268,7 +288,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "50",
+                        "width": "33",
                         "class": "",
                         "id": ""
                     },
@@ -282,6 +302,26 @@
                     "max_size": "",
                     "mime_types": "",
                     "preview_size": "thumbnail"
+                },
+                {
+                    "key": "field_659ea421d3787",
+                    "label": "Add Grid Overlay",
+                    "name": "add_grid_overlay",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
                 }
             ]
         },
@@ -340,6 +380,46 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": ""
+                },
+                {
+                    "key": "field_650071951a1f9",
+                    "label": "Remove Top Padding",
+                    "name": "remove_top_padding",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
+                    "key": "field_650071981a1fa",
+                    "label": "Remove Bottom Padding",
+                    "name": "remove_bottom_padding",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
                 }
             ]
         },
@@ -777,15 +857,7 @@
                     "type": "button_group",
                     "instructions": "",
                     "required": 0,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_64ebbffd47d5c",
-                                "operator": "==",
-                                "value": "large"
-                            }
-                        ]
-                    ],
+                    "conditional_logic": 0,
                     "wrapper": {
                         "width": "33",
                         "class": "",
@@ -802,8 +874,8 @@
                 },
                 {
                     "key": "field_64f51a5c67079",
-                    "label": "Remove Grid Overlay",
-                    "name": "remove_grid_overlay",
+                    "label": "Add Grid Overlay",
+                    "name": "add_grid_overlay",
                     "aria-label": "",
                     "type": "true_false",
                     "instructions": "",
@@ -811,9 +883,9 @@
                     "conditional_logic": [
                         [
                             {
-                                "field": "field_64ebbffd47d5c",
+                                "field": "field_64ebc21aece9f",
                                 "operator": "==",
-                                "value": "large"
+                                "value": "single"
                             }
                         ]
                     ],
@@ -1396,5 +1468,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1693789018
+    "modified": 1704895928
 }

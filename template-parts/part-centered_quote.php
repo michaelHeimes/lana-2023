@@ -2,8 +2,10 @@
 $centered_quote = get_sub_field('centered_quote');
 $quote_text = $centered_quote['quote_text'];
 $quote_author = $centered_quote['quote_author'];
+$remove_tp = $centered_quote['remove_top_padding'];
+$remove_bp = $centered_quote['remove_bottom_padding'];
 ?>
-<div class="centered-quote">
+<div class="centered-quote module-padding<?php if($remove_tp) { echo ' ntp'; }; if($remove_bp) { echo ' nbp'; };?>">
 	<div class="grid-container">
 		<div class="grid-x grid-padding-x">
 			<div class="cell small-12">

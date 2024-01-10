@@ -17,6 +17,10 @@ if( have_rows('page_modules') ):
 		get_template_part('template-parts/part', 'team_members');
 		elseif( get_row_layout() == 'cta_copy_left_buttons_right_module' ):
 		get_template_part('template-parts/part', 'cta_copy_left_buttons_right');
+		elseif( get_row_layout() == 'cta_copy_left_buttons_right_module' ):
+		get_template_part('template-parts/part', 'cta_copy_left_buttons_right');
+		elseif( get_row_layout() == 'news_cta_module' ):
+		get_template_part('template-parts/part', 'news-cta');
 		endif;
 
 	endwhile;

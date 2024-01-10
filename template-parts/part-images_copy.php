@@ -18,7 +18,7 @@
 	$small_heading = $images_copy['small_heading'];
 	$copy = $images_copy['copy'];
 	$button_link = $images_copy['button_link'];
-	$remove_grid_overlay = $images_copy['remove_grid_overlay'];
+	$add_grid_overlay = $images_copy['add_grid_overlay'];
 ?>
 <div class="images-copy module-padding<?php if( $bg_color == 'white' ){ echo ' white-bg'; }; echo ' img-size-' . $image_size;?>">
 	<div class="grid-container">
@@ -31,7 +31,7 @@
 						echo '<div class="top-img-wrap cell small-12 tablet-6 large-4 xlarge-offset-1">';
 						echo '<div class="img-wrap br-12 relative">';
 						echo $img;
-						if( $remove_grid_overlay != 'true' ) {
+						if( $add_grid_overlay == true ) {
 							echo '<div class="mask grid-pattern white over-image"></div>';
 						}
 						echo '</div>';
@@ -44,7 +44,7 @@
 						echo '<div class="top-img-wrap cell small-12 tablet-5 tablet-offset-1">';
 						echo '<div class="img-wrap br-12 relative">';
 						echo $img;
-						if( $remove_grid_overlay != 'true' ) {
+						if( $add_grid_overlay == true ) {
 							echo '<div class="mask grid-pattern white over-image"></div>';
 						}
 						echo '</div>';

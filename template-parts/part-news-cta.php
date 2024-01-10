@@ -1,5 +1,10 @@
 <?php
-	$news_cta = $args['news-cta'];
+	if( !empty( $args['news-cta']) ) {
+		$news_cta = $args['news-cta'];
+	} else {
+		$news_cta = get_sub_field('news_cta');
+	}
+	
 	$eyebrow = $news_cta['eyebrow'];
 	$heading = $news_cta['heading'];
 	$text = $news_cta['text'];

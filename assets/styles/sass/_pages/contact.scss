@@ -46,6 +46,9 @@
 		.gform_footer {
 			margin-top: 4px;
 			padding-bottom: 0;
+			input.gform_button {
+				padding: 0.875em 2.265em;
+			}
 		}
 	}
 }

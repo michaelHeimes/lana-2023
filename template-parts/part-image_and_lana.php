@@ -39,22 +39,22 @@
 						<p><?php echo esc_attr( $leadership_text );?></p>
 					</div>
 					<div class="letter-card cell small-12 tablet-6">
-						<div class="h4">L</div>
+						<div class="h4">A</div>
 						<hr>
-						<h3 class="h6">Leadership</h3>
-						<p><?php echo esc_attr( $leadership_text );?></p>
+						<h3 class="h6">Achievement</h3>
+						<p><?php echo esc_attr( $achievement_text );?></p>
 					</div>
 					<div class="letter-card cell small-12 tablet-6">
-						<div class="h4">L</div>
+						<div class="h4">N</div>
 						<hr>
-						<h3 class="h6">Leadership</h3>
-						<p><?php echo esc_attr( $leadership_text );?></p>
+						<h3 class="h6">Novelty</h3>
+						<p><?php echo esc_attr( $novelty_text );?></p>
 					</div>
 					<div class="letter-card cell small-12 tablet-6">
-						<div class="h4">L</div>
+						<div class="h4">A</div>
 						<hr>
-						<h3 class="h6">Leadership</h3>
-						<p><?php echo esc_attr( $leadership_text );?></p>
+						<h3 class="h6">Accountability</h3>
+						<p><?php echo esc_attr( $accountability_text );?></p>
 					</div>
 					<?php 
 					$link = $button_link;

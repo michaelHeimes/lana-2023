@@ -60,7 +60,9 @@
 				echo '<div class="cell small-12 medium-6 large-5 xlarge-offset-1">';
 				echo '<div class="img-wrap br-12 relative">';
 				echo $img;
-				echo '<div class="mask grid-pattern white over-image"></div>';
+				if( $page_banner_cbli['add_grid_overlay'] == true ) {
+					echo '<div class="mask grid-pattern white over-image"></div>';
+				}
 				echo '</div>';
 				echo '</div>';
 			}?>
