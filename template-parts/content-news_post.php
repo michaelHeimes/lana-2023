@@ -18,7 +18,7 @@
 			echo '<div class="cell small-12">';
 			echo '<div class="news-banner has-object-fit cover br-12">';
 			the_post_thumbnail('full', array('class' => 'object-fit cover'));
-			echo '<div class="mask grid-pattern white over-image"></div>';
+			// echo '<div class="mask grid-pattern white over-image"></div>';
 			echo '</div>';
 			echo '</div>';
 			echo '</div>';
