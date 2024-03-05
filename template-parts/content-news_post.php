@@ -27,8 +27,8 @@
 	
 	?>
 	<div class="grid-container">
-		<div class="grid-x grid-padding-x header-content-wrap">
-			<header class="entry-header cell small-12 tablet-8 tablet-offset-2 large-5 large-offset-0">
+		<div class="grid-x grid-padding-x header-content-wrap align-center">
+			<header class="entry-header cell small-12 large-10 xlarge-9 grid-x flex-dir-column align-top">
 				<hr class="yellow">
 				<?php
 				$terms = get_the_terms(get_the_ID(), 'news_type');
@@ -76,7 +76,7 @@
 				</div><!-- .entry-meta -->
 			</header><!-- .entry-header -->
 
-			<div class="entry-content cell small-12 tablet-8 tablet-offset-2 large-5 large-offset-1">
+			<div class="entry-content cell small-12 large-10 xlarge-9">
 				<?php
 				the_content(
 					sprintf(

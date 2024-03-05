@@ -45,12 +45,19 @@ $fields = get_fields();
 							<div class="grid-container">
 								<div class="grid-x grid-padding-x align-center">
 									<div class="cell small-12"><hr class="top"></div>
+									<div class="cell shrink">
+										<button type="button active" data-post-type="news_post" data-taxonomy="news_type" data-taxonomy-terms="" data-posts-per-page="12" data-scroll="false" data-button-label="All">
+											<span>All</span>
+										</button>
+									</div>
 									<?php foreach ($terms as $term):?>
 									<div class="cell shrink">
-										<button type="button" data-post-type="news_post" data-taxonomy="news_type" data-taxonomy-terms="<?php echo $term->slug;?>" data-posts-per-page="12" data-scroll="false" data-button-label="More <?php echo $term->name;?>"><?php echo $term->name;?></button>
+										<button type="button" data-post-type="news_post" data-taxonomy="news_type" data-taxonomy-terms="<?php echo $term->slug;?>" data-posts-per-page="12" data-scroll="false" data-button-label="More <?php echo $term->name;?>">
+											<span><?php echo $term->name;?></span>
+										</button>
 									</div>
 									<?php endforeach;?>
-									<div class="cell small-12"><hr></div>
+									<div class="cell small-12"><hr class="bottom"></div>
 								</div>
 							</div>
 						</div>

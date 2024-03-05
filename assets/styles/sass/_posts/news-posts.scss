@@ -8,7 +8,10 @@
 		padding-top: 3.3rem;
 		padding-bottom: 6.18rem;
 		header.entry-header {
-			margin-bottom: 2rem;
+			margin-bottom: 2.5rem;
+			@include breakpoint(medium) {
+				margin-bottom: 3.5rem;
+			}
 		}
 	}
 }
