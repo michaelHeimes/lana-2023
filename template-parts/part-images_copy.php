@@ -1,24 +1,24 @@
 <?php 
-	$images_copy = get_sub_field('images_copy');
-	$bg_color = $images_copy['background_color'];
-	$image_size = $images_copy['image_size'];
-	$image_orientation = $images_copy['image_orientation'];
-	$image_type = $images_copy['image_type'];
-	$three_image_set = $images_copy['three-image_set'];
+	$images_copy = get_sub_field('images_copy') ?? null;
+	$bg_color = $images_copy['background_color'] ?? null;
+	$image_size = $images_copy['image_size'] ?? null;
+	$image_orientation = $images_copy['image_orientation'] ?? null;
+	$image_type = $images_copy['image_type'] ?? null;
+	$three_image_set = $images_copy['three-image_set'] ?? null;
 	if( !empty($three_image_set) ) {
-		$top_left_image = $three_image_set['top_left_image'];
-		$top_right_image = $three_image_set['top_right_image'];
-		$bottom_image = $three_image_set['bottom_image'];
+		$top_left_image = $three_image_set['top_left_image'] ?? null;
+		$top_right_image = $three_image_set['top_right_image'] ?? null;
+		$bottom_image = $three_image_set['bottom_image'] ?? null;
 	}
-	$small_image = $images_copy['small_image'];
-	$large_image = $images_copy['large_image'];
-	$icon = $images_copy['icon'];
-	$eyebrow = $images_copy['eyebrow'];
-	$heading = $images_copy['heading'];
-	$small_heading = $images_copy['small_heading'];
-	$copy = $images_copy['copy'];
-	$button_link = $images_copy['button_link'];
-	$add_grid_overlay = $images_copy['add_grid_overlay'];
+	$small_image = $images_copy['small_image'] ?? null;
+	$large_image = $images_copy['large_image'] ?? null;
+	$icon = $images_copy['icon'] ?? null;
+	$eyebrow = $images_copy['eyebrow'] ?? null;
+	$heading = $images_copy['heading'] ?? null;
+	$small_heading = $images_copy['small_heading'] ?? null;
+	$copy = $images_copy['copy'] ?? null;
+	$button_link = $images_copy['button_link'] ?? null;
+	$add_grid_overlay = $images_copy['add_grid_overlay'] ?? null;
 ?>
 <div class="images-copy module-padding<?php if( $bg_color == 'white' ){ echo ' white-bg'; }; echo ' img-size-' . $image_size;?>">
 	<div class="grid-container">

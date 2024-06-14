@@ -1,27 +1,15 @@
 <?php
 	if( !empty( $args['page_banner_cbli'] ) ) {
-		$page_banner_cbli = $args['page_banner_cbli'];
+		$page_banner_cbli = $args['page_banner_cbli'] ?? null;
 	} else {
-		$page_banner_cbli = get_sub_field('page_banner_cbli');
+		$page_banner_cbli = get_sub_field('page_banner_cbli') ?? null;
 	}
-	if( !empty($page_banner_cbli['eyebrow']) ) {
-		$eyebrow = $page_banner_cbli['eyebrow'];
-	}
-	if( !empty($page_banner_cbli['heading']) ) {
-		$heading = $page_banner_cbli['heading'];
-	}
-	if( !empty($page_banner_cbli['small_heading']) ) {
-		$small_heading = $page_banner_cbli['small_heading'];
-	}
-	if( !empty($page_banner_cbli['copy']) ) {
-		$copy = $page_banner_cbli['copy'];
-	}
-	if( !empty($page_banner_cbli['button_link']) ) {
-		$button_link = $page_banner_cbli['button_link'];
-	}
-	if( !empty($page_banner_cbli['image']) ) {
-		$image = $page_banner_cbli['image'];
-	}
+	$eyebrow = $page_banner_cbli['eyebrow'] ?? null;
+	$heading = $page_banner_cbli['heading'] ?? null;
+	$small_heading = $page_banner_cbli['small_heading'] ?? null;
+	$copy = $page_banner_cbli['copy'] ?? null;
+	$button_link = $page_banner_cbli['button_link'] ?? null;
+	$image = $page_banner_cbli['image'] ?? null;
 ?>
 
 <header class="part-page_banner_cbli entry-header page-banner-cbli">
@@ -35,8 +23,8 @@
 					<?php if( !empty($heading) ) {
 						echo '<h1 class="h2">' . $heading . '</h1>' ;
 					};?>	
+					<hr class="yellow">
 					<?php if( !empty($small_heading) ) {
-						echo '<hr class="yellow">';
 						echo '<h3 class="h5">' . $small_heading . '</h3>' ;
 					};?>	
 					<?php if( !empty($copy) ) {

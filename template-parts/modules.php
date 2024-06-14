@@ -21,6 +21,8 @@ if( have_rows('page_modules') ):
 		get_template_part('template-parts/part', 'cta_copy_left_buttons_right');
 		elseif( get_row_layout() == 'news_cta_module' ):
 		get_template_part('template-parts/part', 'news-cta');
+		elseif( get_row_layout() == 'text_editor' ):
+		get_template_part('template-parts/part', 'text-editor');
 		endif;
 
 	endwhile;

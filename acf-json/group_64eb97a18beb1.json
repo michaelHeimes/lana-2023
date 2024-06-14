@@ -291,18 +291,18 @@
                     "min": "",
                     "max": ""
                 },
-                "layout_64fa03f7b5540": {
-                    "key": "layout_64fa03f7b5540",
-                    "name": "news_cta_module",
-                    "label": "News CTA",
+                "layout_666c5abb57f0c": {
+                    "key": "layout_666c5abb57f0c",
+                    "name": "text_editor",
+                    "label": "Text Editor",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_64fa040ab5543",
-                            "label": "News CTA",
-                            "name": "news_cta_clone",
+                            "key": "field_666c5c3810ac2",
+                            "label": "Background Color",
+                            "name": "background_color",
                             "aria-label": "",
-                            "type": "clone",
+                            "type": "button_group",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -311,13 +311,34 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "clone": [
-                                "field_64ea02d666381"
-                            ],
-                            "display": "seamless",
-                            "layout": "block",
-                            "prefix_label": 0,
-                            "prefix_name": 0
+                            "choices": {
+                                "white": "White",
+                                "pebble": "Pebble"
+                            },
+                            "default_value": "",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "layout": "horizontal"
+                        },
+                        {
+                            "key": "field_666c5ac957f0f",
+                            "label": "Text Editor",
+                            "name": "text_editor",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
                         }
                     ],
                     "min": "",
@@ -336,6 +357,13 @@
                 "operator": "==",
                 "value": "default"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "job-cpt"
+            }
         ]
     ],
     "menu_order": 0,
@@ -349,5 +377,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1694106652
+    "modified": 1718377547
 }
